@@ -17,6 +17,14 @@
     {
       "objectId": "crm_prepared_by_gender",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_crm_prepared_windows",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "crm_prepared_windows",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
