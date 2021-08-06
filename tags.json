@@ -19,6 +19,7 @@
       "color": "#1ac2ab"
     },
     "variables": {},
-    "partitions": {}
+    "partitions": {},
+    "recipe-editor": {}
   }
 }
