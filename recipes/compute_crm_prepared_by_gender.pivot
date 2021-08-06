@@ -41,20 +41,102 @@
       }
     }
   },
-  "explicitIdentifiers": [],
+  "explicitIdentifiers": [
+    "age"
+  ],
   "otherColumns": [],
   "pivots": [
     {
+      "valueLimit": "TOP_N",
       "minOccLimit": 0,
-      "topnLimit": 0,
+      "topnLimit": 20,
       "globalCount": true,
       "explicitValues": [],
       "keyColumns": [
         "gender"
       ],
-      "valueColumns": []
+      "valueColumns": [
+        {
+          "last": false,
+          "max": false,
+          "column": "revenue",
+          "count": false,
+          "sum": false,
+          "concat": false,
+          "type": "bigint",
+          "$agg": "avg",
+          "countDistinct": false,
+          "min": false,
+          "avg": true,
+          "stddev": false,
+          "first": false
+        },
+        {
+          "last": false,
+          "max": false,
+          "column": "revenue",
+          "count": false,
+          "sum": false,
+          "concat": false,
+          "type": "bigint",
+          "$agg": "min",
+          "countDistinct": false,
+          "min": true,
+          "avg": false,
+          "stddev": false,
+          "first": false
+        },
+        {
+          "last": false,
+          "max": true,
+          "column": "revenue",
+          "count": false,
+          "sum": false,
+          "concat": false,
+          "type": "bigint",
+          "$agg": "max",
+          "countDistinct": false,
+          "min": false,
+          "avg": false,
+          "stddev": false,
+          "first": false
+        },
+        {
+          "last": false,
+          "max": false,
+          "column": "birth_parsed",
+          "count": false,
+          "sum": false,
+          "concat": false,
+          "type": "date",
+          "$agg": "first",
+          "countDistinct": false,
+          "min": false,
+          "avg": false,
+          "stddev": false,
+          "first": true,
+          "orderColumn": "customer_id"
+        },
+        {
+          "last": true,
+          "max": false,
+          "column": "birth_parsed",
+          "count": false,
+          "sum": false,
+          "concat": false,
+          "type": "date",
+          "$agg": "last",
+          "countDistinct": false,
+          "min": false,
+          "avg": false,
+          "stddev": false,
+          "first": false,
+          "orderColumn": "customer_id"
+        }
+      ]
     }
   ],
   "computedColumns": [],
-  "customAggregates": []
+  "customAggregates": [],
+  "enginesPreferences": {}
 }
