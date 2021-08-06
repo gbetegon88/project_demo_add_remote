@@ -41,7 +41,8 @@
   "additionalDashboardUsers": {
     "users": []
   },
-  "tutorialProject": false,
+  "tutorialProject": true,
+  "tutorialId": "DKU_CUSTOMER_LIFETIME_VALUE",
   "settings": {
     "flowAnchorSourcesAndSinks": true,
     "flowDisplaySettings": {
@@ -152,7 +153,8 @@
       }
     }
   },
-  "name": "Customer Lifetime Value (Basics)",
+  "name": "Customer Lifetime Value (Basics) for Admin",
+  "projectStatus": "Sandbox",
   "imgPattern": 4,
   "metrics": {
     "probes": [],
@@ -209,11 +211,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 17,
+    "versionNumber": 18,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628260224600
+    "lastModifiedOn": 1628260227048
   },
   "description": "In this project, we want to predict how much net profit each new customer is going to bring us in total. In other words, we\u0027re **looking to predict our Customer Lifetime Value!** \n\nTo do this, you\u0027ll learn how to combine data from several different sources, enrich it, and build and deploy a model on it.\n\n# Business goals\nThe goal is to build a model to predict how much money a customer will spend, based on his first interactions on our website.\nTo do this, we\u0027ll be using lots of types of data: web traffic data, and historical customer purchases, enriched with open data on countries (GDP).\n\n# How do we do this?\n\nWe have collected several different types of data from our historical customers:\n- Demographic information (age, gender, location)\n- Their actions on our website\n- The marketing campaigns they received\n- Their previous purchases\n\nIn addition, we\u0027re going to use data about their location to enrich our dataset.\n\nUsing a preparation step, we\u0027re going to start by joining the different data sources. Then we\u0027ll enrich that data in order to train the model. Then, we can copy the recipe and apply it to new data, so we can score new users using our model!\n\n# Explore the sample project\n\n- Start by taking a look at the flow to see the different steps of data preparation and machine learning that are needed for this project.\n\n\u003cp class\u003d\"text-center\"\u003e\n\u003ca href\u003d\"/projects/DKU_CUSTOMER_LIFETIME_VALUE/flow/\"  class\u003d\"btn btn-datasets-color btn-cta-big-mod\"\u003e\u003ci class\u003d\"icon-dku-sample_project\" class\u003d\"btn-cta-big-mod-icon\" /\u003e\u0026nbsp;Flow\u003c/a\u003e\u003cbr/\u003e\u003cbr/\u003e\n\u003c/p\u003e\n\n- Take a look at how we clean and analyse historical data, and enrich it with geographic data: \n\n\u003cp class\u003d\"text-center\"\u003e\n\u003ca href\u003d\"/projects/DKU_CUSTOMER_LIFETIME_VALUE/recipes/prepare_crm_prepared/\"  class\u003d\"btn btn-datasets-color btn-cta-big-mod\"\u003e\u003ci class\u003d\"icon-dku-sample_project\" class\u003d\"btn-cta-big-mod-icon\" /\u003e\u0026nbsp;Visual Preparation\u003c/a\u003e\u003cbr/\u003e\u003cbr/\u003e\n\u003c/p\u003e\n\n- Check out our random forest algorithm to predict how much revenue will come from each client.\n\n\u003cp class\u003d\"text-center\"\u003e\n\u003ca href\u003d\"/projects/DKU_CUSTOMER_LIFETIME_VALUE/savedmodels/8A6fb5O8/versions/\"  class\u003d\"btn btn-datasets-color btn-cta-big-mod\"\u003e\u003ci class\u003d\"icon-dku-sample_project\" class\u003d\"btn-cta-big-mod-icon\" /\u003e\u0026nbsp;Model\u003c/a\u003e\u003cbr/\u003e\u003cbr/\u003e\n\u003c/p\u003e\n\n- Finally, check out the output dataset we got after we\u0027ve deployed the model on our new users. It\u0027s published on the dashboard! You can see the column predicting the lifetime value on the right.\n\n\u003cp class\u003d\"text-center\"\u003e\n\u003ca href\u003d\"/projects/DKU_CUSTOMER_LIFETIME_VALUE/dashboards/DTp3MvZ_default-dashboard/view/xA3Q68u\"  class\u003d\"btn btn-datasets-color btn-cta-big-mod\"\u003e\u003ci class\u003d\"icon-dku-sample_project\" class\u003d\"btn-cta-big-mod-icon\" /\u003e\u0026nbsp;Dashboard with the Scored Dataset\u003c/a\u003e\u003cbr/\u003e\u003cbr/\u003e\n\u003c/p\u003e\n\n\u003ca name\u003d\"MORE\"\u003e\n#Related content\n\u003c/a\u003e\n\nIf you want more resources (and we know you do), check these out: \n\n- our [machine learning course](https://academy.dataiku.com/machine-learning-basics) so you can build your first machine learning model in DSS on your own\n- the [churn sample project](/projects/DKU_CHURN/), where you\u0027ll see not only one but 2 models in one flow\n- [our tutorial on deploying a model as a scoring API](https://academy.dataiku.com/real-time-deployment) ",
   "shortDesc": "Predicting Customer Lifetime Value using web traffic data, and historical customer purchases.",
