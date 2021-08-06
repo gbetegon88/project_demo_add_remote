@@ -9,6 +9,14 @@
     {
       "objectId": "compute_crm_grouped_by",
       "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_crm_prepared_by_gender",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "crm_prepared_by_gender",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
