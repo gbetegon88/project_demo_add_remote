@@ -1,7 +1,16 @@
 {
   "name": "code",
   "color": "#D03713",
-  "items": [],
+  "items": [
+    {
+      "objectId": "crm_with_python",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_crm_with_python",
+      "objectType": "RECIPE"
+    }
+  ],
   "shared": [],
   "tags": [],
   "customFields": {},
