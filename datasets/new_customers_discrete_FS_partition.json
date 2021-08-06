@@ -54,17 +54,22 @@
     "compress": "gz"
   },
   "partitioning": {
-    "filePathPattern": "",
+    "filePathPattern": "%{gender}/.*",
     "ignoreNonMatchingFile": false,
     "considerMissingRequestedPartitionsAsEmpty": false,
-    "dimensions": []
+    "dimensions": [
+      {
+        "name": "gender",
+        "type": "value"
+      }
+    ]
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628263760011
+    "lastModifiedOn": 1628263775402
   },
   "creationTag": {
     "versionNumber": 0,
