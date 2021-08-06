@@ -21,6 +21,10 @@
     {
       "objectId": "model_drift",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_model_drift",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
