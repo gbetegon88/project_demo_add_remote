@@ -1,41 +1,50 @@
 {
-  "checklists": {
-    "checklists": []
-  }, 
+  "type": "prediction_training",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
   "customMeta": {
     "kv": {}
-  }, 
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
   "inputs": {
     "main": {
       "items": [
         {
-          "deps": [], 
-          "ref": "crm_prepared"
+          "ref": "crm_prepared",
+          "deps": []
         }
       ]
     }
-  }, 
-  "neverRecomputeExistingPartitions": false, 
-  "optionalDependencies": false, 
+  },
   "outputs": {
     "main": {
       "items": [
         {
-          "appendMode": false, 
-          "ref": "8A6fb5O8"
+          "ref": "8A6fb5O8",
+          "appendMode": false
         }
       ]
     }
-  }, 
-  "params": {}, 
-  "redispatchPartitioning": false, 
-  "tags": [], 
-  "type": "prediction_training", 
+  },
+  "labels": [],
   "versionTag": {
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
-    }, 
-    "lastModifiedOn": 1510826492459, 
-    "versionNumber": 3
+    },
+    "lastModifiedOn": 1628268359081
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
   }
 }
