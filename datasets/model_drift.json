@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628268009753
+    "lastModifiedOn": 1628268465843
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,8 +85,49 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {
+        "name": "timestamp",
+        "type": "date"
+      },
+      {
+        "name": "model_id",
+        "type": "string"
+      },
+      {
+        "name": "version_id",
+        "type": "string"
+      },
+      {
+        "name": "train_date",
+        "type": "string"
+      },
+      {
+        "name": "drift_model_accuracy",
+        "type": "double"
+      },
+      {
+        "name": "binomial_test_p_value",
+        "type": "double"
+      },
+      {
+        "name": "accuracy_lower_bound",
+        "type": "double"
+      },
+      {
+        "name": "accuracy_upper_bound",
+        "type": "double"
+      },
+      {
+        "name": "fugacity",
+        "type": "string"
+      },
+      {
+        "name": "fugacity_relative_change",
+        "type": "string"
+      }
+    ],
+    "userModified": false
   },
   "dkuProperties": [],
   "metrics": {
