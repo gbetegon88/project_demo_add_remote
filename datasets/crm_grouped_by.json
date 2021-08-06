@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628266548190
+    "lastModifiedOn": 1628266587908
   },
   "creationTag": {
     "versionNumber": 0,
@@ -89,6 +89,22 @@
       {
         "name": "gender",
         "type": "string"
+      },
+      {
+        "name": "age",
+        "type": "bigint"
+      },
+      {
+        "name": "birth_parsed_min",
+        "type": "date"
+      },
+      {
+        "name": "revenue_avg",
+        "type": "double"
+      },
+      {
+        "name": "join_ip_country_distinct",
+        "type": "bigint"
       },
       {
         "name": "count",
