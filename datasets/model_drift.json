@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628268465843
+    "lastModifiedOn": 1628268465941
   },
   "creationTag": {
     "versionNumber": 0,
@@ -104,27 +104,33 @@
       },
       {
         "name": "drift_model_accuracy",
-        "type": "double"
+        "type": "double",
+        "comment": "In order to detect data drift, we train a random forest classifier (the drift model) to discriminate the new data set from the test set. If this classifier has accuracy \u003e 0.5, it implies that test data and new data can be distinguished and that you are observing data drift. You may consider retraining your model in that situation."
       },
       {
         "name": "binomial_test_p_value",
-        "type": "double"
+        "type": "double",
+        "comment": "The hypothesis tested is that there is no drift, in which case the expected drift model accuracy is 0.5 (datasets undistinguishable). The observed accuracy might deviate from this expectation and the Binomial test evaluates whether this deviation is statistically significant, modelling the number of correct predictions as a random variable drawn from a Binomial distribution. The p-value is the probability to observe this particular accuracy (or larger) under the hypothesis of absent drift. If this probability is lower than the significance level (i.e. 5%), it’s then unlikely to be in the situation of absent drift: the hypothesis of no drift is rejected, triggering a drift detection. The significance level indicates the rate of falsely-detected drifts we are ready to accept from the test."
       },
       {
         "name": "accuracy_lower_bound",
-        "type": "double"
+        "type": "double",
+        "comment": "Confidence interval lower bound for the accuracy of the domain classifier"
       },
       {
         "name": "accuracy_upper_bound",
-        "type": "double"
+        "type": "double",
+        "comment": "Confidence interval upper bound for the accuracy of the domain classifier"
       },
       {
         "name": "fugacity",
-        "type": "string"
+        "type": "string",
+        "comment": "Proportion of samples predicted (in %) in each decile when scoring on both the original test and the new input dataset.\n\nDecile 0: from -inf to 76.62\nDecile 1: from 76.622 to 112.0\nDecile 2: from 112.002 to 147.38\nDecile 3: from 147.382 to 182.76\nDecile 4: from 182.762 to 218.14\nDecile 5: from 218.142 to 253.52\nDecile 6: from 253.523 to 288.9\nDecile 7: from 288.903 to 324.28\nDecile 8: from 324.283 to 359.66\nDecile 9: from 359.66 to +inf"
       },
       {
         "name": "fugacity_relative_change",
-        "type": "string"
+        "type": "string",
+        "comment": "Relative change (in %) in each decile with respect to the original fugacity value.\n\nFormula: 100*(new_fugacity - original_fugacity)/original_fugacity\n\nDecile 0: from -inf to 76.62\nDecile 1: from 76.622 to 112.0\nDecile 2: from 112.002 to 147.38\nDecile 3: from 147.382 to 182.76\nDecile 4: from 182.762 to 218.14\nDecile 5: from 218.142 to 253.52\nDecile 6: from 253.523 to 288.9\nDecile 7: from 288.903 to 324.28\nDecile 8: from 324.283 to 359.66\nDecile 9: from 359.66 to +inf"
       }
     ],
     "userModified": false
