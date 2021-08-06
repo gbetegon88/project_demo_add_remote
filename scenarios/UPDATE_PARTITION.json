@@ -5,18 +5,18 @@
   "name": "update_partition",
   "active": false,
   "creationTag": {
-    "versionNumber": 4,
-    "lastModifiedBy": {
-      "login": "admin"
-    },
-    "lastModifiedOn": 1628265249713
-  },
-  "versionTag": {
     "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
     "lastModifiedOn": 1628265268878
+  },
+  "versionTag": {
+    "versionNumber": 6,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1628265299572
   },
   "checklists": {
     "checklists": []
@@ -59,7 +59,7 @@
         "id": "custom_python_LMvl5oVvrGyi3UYqsOxUGA",
         "type": "custom_python",
         "name": "Step #1",
-        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionType": "RUN_ALWAYS",
         "runConditionStatuses": [
           "SUCCESS",
           "WARNING"
@@ -80,7 +80,7 @@
         "id": "build_0_true_d_partitions_filtered_with_variable",
         "type": "build_flowitem",
         "name": "Step #2",
-        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionType": "RUN_ALWAYS",
         "runConditionStatuses": [
           "SUCCESS",
           "WARNING"
