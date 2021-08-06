@@ -17,6 +17,14 @@
     {
       "objectId": "new_customers_time_SQL_partitions",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_partitions_filtered_with_variable",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "partitions_filtered_with_variable",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
