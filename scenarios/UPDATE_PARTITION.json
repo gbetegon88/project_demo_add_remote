@@ -5,18 +5,18 @@
   "name": "update_partition",
   "active": false,
   "creationTag": {
-    "versionNumber": 0,
-    "lastModifiedBy": {
-      "login": "admin"
-    },
-    "lastModifiedOn": 1628264824346
-  },
-  "versionTag": {
     "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
     "lastModifiedOn": 1628265170985
+  },
+  "versionTag": {
+    "versionNumber": 2,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1628265185428
   },
   "checklists": {
     "checklists": []
@@ -45,7 +45,7 @@
         "delayBetweenRetries": 10,
         "maxRetriesOnFail": 0,
         "params": {
-          "script": "import dataiku\nfrom dataiku import pandasutils as pdu\nimport pandas as pd\nimport numpy as np\n\nclient \u003d dataiku.api_client()\nproject \u003d client.get_default_project()\n\nvariables \u003d project.get_variables()\n\nvariables[\u0027standard\u0027][\u0027year\u0027] \u003d np.random.randint(1995, 2000)\n\nproject.set_variables(variables)",
+          "script": "import dataiku\nfrom dataiku import pandasutils as pdu\nimport pandas as pd\nimport numpy as np\n\nclient \u003d dataiku.api_client()\nproject \u003d client.get_default_project()\nvariables \u003d project.get_variables()\nvariables[\u0027standard\u0027][\u0027year\u0027] \u003d np.random.randint(1995, 2000)\nproject.set_variables(variables)",
           "envSelection": {
             "envMode": "INHERIT"
           },
