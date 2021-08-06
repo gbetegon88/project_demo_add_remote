@@ -1,182 +1,196 @@
 {
-  "explorationFilters": [],
-  "maxProcessedMemTableBytes": -1,
-  "analysisColumnData": {},
   "columnsSelection": {
     "mode": "ALL"
   },
-  "globalSearchQuery": "",
-  "vizSampling": {
+  "explorationSampling": {
     "_refreshTrigger": 0,
+    "selection": {
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": 30000,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "maxStoredBytes": -1,
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "timeout": -1
+    },
     "autoRefreshSample": false
   },
+  "explorationFilters": [],
   "origin": "PREPARE_RECIPE",
-  "sorting": [],
-  "coloring": {
-    "individualColumns": [],
-    "scheme": "MEANING_AND_STATUS",
-    "valueColoringMode": "HASH"
+  "exploreUIParams": {
+    "autoRefresh": true
   },
   "steps": [
     {
-      "alwaysShowComment": false,
       "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateParser",
       "params": {
         "outCol": "birth_parsed",
-        "appliesTo": "SINGLE_COLUMN",
+        "formats": [
+          "MM/dd/yyyy"
+        ],
         "columns": [
           "birth"
         ],
         "timezone_id": "UTC",
-        "lang": "auto",
-        "formats": [
-          "MM/dd/yyyy"
-        ]
+        "appliesTo": "SINGLE_COLUMN",
+        "lang": "auto"
       },
-      "type": "DateParser",
-      "disabled": false,
-      "metaType": "PROCESSOR"
+      "alwaysShowComment": false
     },
     {
-      "alwaysShowComment": false,
       "preview": false,
-      "params": {
-        "reverse": false,
-        "outputUnit": "YEARS",
-        "compareTo": "NOW",
-        "output": "since_birth_parsed_days",
-        "input1": "birth_parsed"
-      },
+      "metaType": "PROCESSOR",
+      "disabled": false,
       "type": "DateDifference",
-      "disabled": false,
-      "metaType": "PROCESSOR"
+      "params": {
+        "output": "since_birth_parsed_days",
+        "outputUnit": "YEARS",
+        "input1": "birth_parsed",
+        "compareTo": "NOW",
+        "reverse": false
+      },
+      "alwaysShowComment": false
     },
     {
-      "alwaysShowComment": false,
       "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
       "params": {
         "renamings": [
           {
-            "to": "age",
-            "from": "since_birth_parsed_days"
+            "from": "since_birth_parsed_days",
+            "to": "age"
           }
         ]
       },
-      "type": "ColumnRenamer",
-      "disabled": false,
-      "metaType": "PROCESSOR"
+      "alwaysShowComment": false
     },
     {
-      "alwaysShowComment": false,
       "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": true,
+      "type": "ColumnsSelector",
       "params": {
-        "appliesTo": "COLUMNS",
         "columns": [
           "birth_parsed",
           "birth"
         ],
-        "keep": false
+        "keep": false,
+        "appliesTo": "COLUMNS"
       },
-      "type": "ColumnsSelector",
-      "disabled": false,
-      "metaType": "PROCESSOR"
+      "alwaysShowComment": false
     },
     {
-      "alwaysShowComment": false,
       "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "MemoryEquiJoiner",
       "params": {
-        "rightInput": "web_new_visitors",
-        "leftCol": "customer_id",
         "rightCol": "customer_id",
-        "clearStopWords": false,
-        "maxLevenshtein": 1,
+        "forceRawLevenshteinEngine": false,
+        "copyPrefix": "join_",
         "sortAlphabetically": false,
+        "language": "english",
+        "leftCol": "customer_id",
         "copyColumns": [
           "ip",
           "pages_visited",
           "campain"
         ],
         "normalize": false,
-        "copyPrefix": "join_",
-        "fuzzy": false,
-        "language": "english",
-        "stem": false,
-        "forceRawLevenshteinEngine": false
-      },
-      "type": "MemoryEquiJoiner",
-      "disabled": false,
-      "metaType": "PROCESSOR"
-    },
-    {
-      "alwaysShowComment": false,
-      "preview": false,
-      "params": {
-        "extract_countrycode3": false,
-        "extract_postalcode": false,
-        "extract_country": true,
-        "extract_geopoint": false,
-        "extract_timezone": false,
-        "inCol": "join_ip",
-        "outColPrefix": "join_ip_",
-        "extract_city": false,
-        "extract_countrycode": false,
-        "extract_continentcode": false,
-        "extract_latlng": false,
-        "extract_region": false
-      },
-      "type": "GeoIPResolver",
-      "disabled": false,
-      "metaType": "PROCESSOR"
-    },
-    {
-      "alwaysShowComment": false,
-      "preview": false,
-      "params": {
-        "rightInput": "country_gdp",
-        "leftCol": "join_ip_country",
-        "rightCol": "Country",
-        "clearStopWords": false,
         "maxLevenshtein": 1,
+        "clearStopWords": false,
+        "fuzzy": false,
+        "rightInput": "web_new_visitors",
+        "stem": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "GeoIPResolver",
+      "params": {
+        "inCol": "join_ip",
+        "extract_country": true,
+        "extract_countrycode3": false,
+        "extract_city": false,
+        "extract_latlng": false,
+        "extract_countrycode": false,
+        "extract_postalcode": false,
+        "extract_timezone": false,
+        "outColPrefix": "join_ip_",
+        "extract_continentcode": false,
+        "extract_region": false,
+        "extract_geopoint": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "MemoryEquiJoinerFuzzy",
+      "params": {
+        "rightCol": "Country",
+        "forceRawLevenshteinEngine": false,
+        "copyPrefix": "join_",
         "sortAlphabetically": false,
+        "language": "english",
+        "leftCol": "join_ip_country",
         "copyColumns": [
           "GDP_cap"
         ],
         "normalize": true,
-        "copyPrefix": "join_",
+        "maxLevenshtein": 1,
+        "clearStopWords": false,
         "fuzzy": true,
-        "language": "english",
-        "stem": false,
-        "forceRawLevenshteinEngine": false
+        "rightInput": "country_gdp",
+        "stem": false
       },
-      "type": "MemoryEquiJoinerFuzzy",
-      "disabled": false,
-      "metaType": "PROCESSOR"
+      "alwaysShowComment": false
     }
   ],
-  "exploreUIParams": {
-    "autoRefresh": true
-  },
+  "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
-  "explorationSampling": {
+  "vizSampling": {
     "_refreshTrigger": 0,
-    "autoRefreshSample": false,
-    "selection": {
-      "targetRatio": 0.02,
-      "maxRecords": 30000,
-      "maxStoredBytes": -1,
-      "partitionSelectionMethod": "ALL",
-      "withinFirstN": -1,
-      "samplingMethod": "HEAD_SEQUENTIAL",
-      "latestPartitionsN": 1,
-      "ordering": {
-        "enabled": false,
-        "rules": []
-      },
-      "maxReadUncompressedBytes": -1,
-      "filter": {
-        "enabled": false,
-        "distinct": false
-      }
-    }
+    "autoRefreshSample": false
+  },
+  "analysisColumnData": {},
+  "columnWidthsByName": {
+    "join_pages_visited": 150,
+    "join_campain": 105,
+    "gender": 100,
+    "join_ip": 120,
+    "price_first_item_purchased": 210,
+    "join_GDP_cap": 105,
+    "birth": 100,
+    "birth_parsed": 183,
+    "customer_id": 127,
+    "age": 100,
+    "join_ip_country": 141
+  },
+  "sorting": [],
+  "globalSearchQuery": "",
+  "coloring": {
+    "scheme": "MEANING_AND_STATUS",
+    "individualColumns": [],
+    "valueColoringMode": "HASH"
   }
 }
