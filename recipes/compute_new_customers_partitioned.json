@@ -48,7 +48,7 @@
   "customMeta": {
     "kv": {}
   },
-  "redispatchPartitioning": false,
+  "redispatchPartitioning": true,
   "maxRunningActivities": 0,
   "variables": {},
   "dkuProperties": [],
@@ -74,11 +74,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628262851437
+    "lastModifiedOn": 1628263107534
   },
   "creationTag": {
     "versionNumber": 0,
