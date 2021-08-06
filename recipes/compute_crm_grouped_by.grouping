@@ -5,7 +5,37 @@
   },
   "keys": [
     {
-      "column": "gender"
+      "countDistinct": false,
+      "min": false,
+      "avg": false,
+      "last": false,
+      "max": false,
+      "column": "gender",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "stddev": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "age",
+      "count": false,
+      "$idx": 3,
+      "sum": false,
+      "concat": false,
+      "type": "bigint",
+      "concatDistinct": false,
+      "sum2": false,
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "$selected": false,
+      "stddev": false,
+      "first": false
     }
   ],
   "values": [
@@ -15,8 +45,10 @@
       "firstLastNotNull": false,
       "column": "customer_id",
       "count": false,
+      "$idx": 0,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -31,13 +63,16 @@
       "firstLastNotNull": false,
       "column": "birth",
       "count": false,
+      "$idx": 1,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -47,29 +82,16 @@
       "firstLastNotNull": false,
       "column": "birth_parsed",
       "count": false,
+      "$idx": 2,
       "sum": false,
       "concat": false,
+      "type": "date",
       "concatDistinct": false,
       "sum2": false,
-      "min": false,
+      "min": true,
       "countDistinct": false,
       "avg": false,
-      "stddev": false,
-      "first": false
-    },
-    {
-      "last": false,
-      "max": false,
-      "firstLastNotNull": false,
-      "column": "age",
-      "count": false,
-      "sum": false,
-      "concat": false,
-      "concatDistinct": false,
-      "sum2": false,
-      "min": false,
-      "countDistinct": false,
-      "avg": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -79,8 +101,10 @@
       "firstLastNotNull": false,
       "column": "price_first_item_purchased",
       "count": false,
+      "$idx": 3,
       "sum": false,
       "concat": false,
+      "type": "double",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -95,13 +119,16 @@
       "firstLastNotNull": false,
       "column": "revenue",
       "count": false,
+      "$idx": 4,
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
-      "avg": false,
+      "avg": true,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -111,8 +138,10 @@
       "firstLastNotNull": false,
       "column": "join_ip",
       "count": false,
+      "$idx": 5,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -127,13 +156,16 @@
       "firstLastNotNull": false,
       "column": "join_ip_country",
       "count": false,
+      "$idx": 6,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
-      "countDistinct": false,
+      "countDistinct": true,
       "avg": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -143,8 +175,10 @@
       "firstLastNotNull": false,
       "column": "join_pages_visited",
       "count": false,
+      "$idx": 7,
       "sum": false,
       "concat": false,
+      "type": "double",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -159,8 +193,10 @@
       "firstLastNotNull": false,
       "column": "join_campain",
       "count": false,
+      "$idx": 8,
       "sum": false,
       "concat": false,
+      "type": "boolean",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -175,8 +211,10 @@
       "firstLastNotNull": false,
       "column": "join_GDP_cap",
       "count": false,
+      "$idx": 9,
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -222,8 +260,40 @@
     }
   },
   "enlargeYourBits": true,
+  "outputColumnNameOverrides": {},
   "computedColumns": [],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "gender",
+            "type": "string"
+          },
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "birth_parsed_min",
+            "type": "date"
+          },
+          {
+            "name": "revenue_avg",
+            "type": "double"
+          },
+          {
+            "name": "join_ip_country_distinct",
+            "type": "bigint"
+          },
+          {
+            "name": "count",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   }
