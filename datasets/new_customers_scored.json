@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1486142170721
+    "lastModifiedOn": 1628260892467
   },
   "creationTag": {
     "versionNumber": 0,
@@ -91,6 +91,14 @@
       {
         "name": "customer_id",
         "type": "string"
+      },
+      {
+        "name": "birth",
+        "type": "string"
+      },
+      {
+        "name": "birth_parsed",
+        "type": "date"
       },
       {
         "name": "age",
@@ -129,7 +137,7 @@
         "type": "float"
       }
     ],
-    "userModified": false
+    "userModified": true
   },
   "dkuProperties": [],
   "metrics": {
