@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628266998045
+    "lastModifiedOn": 1628270939322
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,8 +85,61 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {
+        "name": "customer_id",
+        "type": "string"
+      },
+      {
+        "name": "birth",
+        "type": "string"
+      },
+      {
+        "name": "birth_parsed",
+        "type": "date"
+      },
+      {
+        "name": "age",
+        "type": "bigint"
+      },
+      {
+        "name": "price_first_item_purchased",
+        "type": "double"
+      },
+      {
+        "name": "gender",
+        "type": "string"
+      },
+      {
+        "name": "revenue",
+        "type": "bigint"
+      },
+      {
+        "name": "join_ip",
+        "type": "string"
+      },
+      {
+        "name": "join_ip_country",
+        "type": "string"
+      },
+      {
+        "name": "join_pages_visited",
+        "type": "double"
+      },
+      {
+        "name": "join_campain",
+        "type": "boolean"
+      },
+      {
+        "name": "join_GDP_cap",
+        "type": "double"
+      },
+      {
+        "name": "dif_revenue",
+        "type": "double"
+      }
+    ],
+    "userModified": false
   },
   "dkuProperties": [],
   "metrics": {
