@@ -2,21 +2,21 @@
   "projectKey": "DKU_CUSTOMER_LIFETIME_VALUE",
   "id": "UPDATE_PARTITION",
   "type": "step_based",
-  "name": "update_partition",
+  "name": "update_partition_with_variable",
   "active": false,
   "creationTag": {
-    "versionNumber": 7,
-    "lastModifiedBy": {
-      "login": "admin"
-    },
-    "lastModifiedOn": 1628265305735
-  },
-  "versionTag": {
     "versionNumber": 8,
     "lastModifiedBy": {
       "login": "admin"
     },
     "lastModifiedOn": 1628265328222
+  },
+  "versionTag": {
+    "versionNumber": 9,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1628265366176
   },
   "checklists": {
     "checklists": []
