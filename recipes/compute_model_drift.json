@@ -3,7 +3,16 @@
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
   "params": {
-    "customConfig": {},
+    "customConfig": {
+      "use_active_version": true,
+      "metric_list": [
+        "drift_score",
+        "drift_model_accuracy",
+        "fugacity",
+        "riskiest_features",
+        "feature_importance"
+      ]
+    },
     "containerSelection": {
       "containerMode": "INHERIT"
     }
@@ -45,11 +54,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628268011233
+    "lastModifiedOn": 1628268030873
   },
   "creationTag": {
     "versionNumber": 0,
