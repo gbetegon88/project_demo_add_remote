@@ -58,7 +58,7 @@
       "params": {
         "inCol": "birth_parsed",
         "outCol": "birth_parsed_formatted",
-        "format": "yyyy-MM",
+        "format": "yyyy",
         "timezone_id": "UTC",
         "lang": "en_US"
       },
