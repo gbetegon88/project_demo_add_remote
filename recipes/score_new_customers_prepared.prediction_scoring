@@ -1,17 +1,20 @@
 {
-    "outputProbabilities": true, 
-    "keptInputColumns": [], 
-    "overrideModelSpecifiedThreshold": false, 
-    "backendType": "PY_MEMORY", 
-    "filterInputColumns": false, 
-    "forceOriginalEngine": false, 
-    "sparkParams": {
-        "pipelineAllowStart": null, 
-        "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK", 
-        "sparkConf": null, 
-        "sparkRepartitionNonHDFS": 1, 
-        "pipelineAllowMerge": null
-    }, 
-    "forcedClassifierThreshold": 0, 
-    "outputProbaPercentiles": false
+  "keptInputColumns": [],
+  "backendType": "PY_MEMORY",
+  "filterInputColumns": false,
+  "outputProbabilities": true,
+  "outputProbaPercentiles": false,
+  "forceOriginalEngine": false,
+  "individualExplanationParams": {
+    "subChunkSize": 5000,
+    "method": "ICE",
+    "shapleyBackgroundSize": 100,
+    "nbExplanations": 3
+  },
+  "forcedClassifierThreshold": 0,
+  "overrideModelSpecifiedThreshold": false,
+  "sparkParams": {
+    "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK",
+    "sparkRepartitionNonHDFS": 1
+  }
 }

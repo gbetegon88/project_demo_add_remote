@@ -1,49 +1,58 @@
 {
-  "checklists": {
-    "checklists": []
-  }, 
+  "type": "prediction_scoring",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
   "customMeta": {
     "kv": {}
-  }, 
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
   "inputs": {
     "main": {
       "items": [
         {
-          "deps": [], 
-          "ref": "new_customers_prepared"
+          "ref": "new_customers_prepared",
+          "deps": []
         }
       ]
-    }, 
+    },
     "model": {
       "items": [
         {
-          "deps": [], 
-          "ref": "8A6fb5O8"
+          "ref": "8A6fb5O8",
+          "deps": []
         }
       ]
     }
-  }, 
-  "neverRecomputeExistingPartitions": false, 
-  "optionalDependencies": false, 
+  },
   "outputs": {
     "main": {
       "items": [
         {
-          "appendMode": false, 
-          "ref": "new_customers_scored"
+          "ref": "new_customers_scored",
+          "appendMode": false
         }
       ]
     }
-  }, 
-  "params": {}, 
-  "redispatchPartitioning": false, 
-  "tags": [], 
-  "type": "prediction_scoring", 
+  },
+  "labels": [],
   "versionTag": {
+    "versionNumber": 8,
     "lastModifiedBy": {
       "login": "admin"
-    }, 
-    "lastModifiedOn": 1510826507744, 
-    "versionNumber": 7
+    },
+    "lastModifiedOn": 1628268370284
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
   }
 }
