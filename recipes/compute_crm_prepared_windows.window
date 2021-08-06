@@ -4,6 +4,7 @@
     "enabled": false
   },
   "ntileValues": "10",
+  "keys": [],
   "values": [
     {
       "last": false,
@@ -12,9 +13,11 @@
       "firstLastNotNull": false,
       "column": "customer_id",
       "count": false,
+      "$idx": 0,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -35,9 +38,11 @@
       "firstLastNotNull": false,
       "column": "birth",
       "count": false,
+      "$idx": 1,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -58,9 +63,11 @@
       "firstLastNotNull": false,
       "column": "birth_parsed",
       "count": false,
+      "$idx": 2,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "date",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -81,9 +88,11 @@
       "firstLastNotNull": false,
       "column": "age",
       "count": false,
+      "$idx": 3,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -104,9 +113,11 @@
       "firstLastNotNull": false,
       "column": "price_first_item_purchased",
       "count": false,
+      "$idx": 4,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "double",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -127,9 +138,11 @@
       "firstLastNotNull": false,
       "column": "gender",
       "count": false,
+      "$idx": 5,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -150,9 +163,11 @@
       "firstLastNotNull": false,
       "column": "revenue",
       "count": false,
+      "$idx": 6,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -173,9 +188,11 @@
       "firstLastNotNull": false,
       "column": "join_ip",
       "count": false,
+      "$idx": 7,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -196,9 +213,11 @@
       "firstLastNotNull": false,
       "column": "join_ip_country",
       "count": false,
+      "$idx": 8,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -219,9 +238,11 @@
       "firstLastNotNull": false,
       "column": "join_pages_visited",
       "count": false,
+      "$idx": 9,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "double",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -242,9 +263,11 @@
       "firstLastNotNull": false,
       "column": "join_campain",
       "count": false,
+      "$idx": 10,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "boolean",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -265,9 +288,11 @@
       "firstLastNotNull": false,
       "column": "join_GDP_cap",
       "count": false,
+      "$idx": 11,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -285,7 +310,7 @@
   "legacyUnboundedWindowStreamBehavior": false,
   "windows": [
     {
-      "windowUpperBound": 0.0,
+      "windowUpperBound": 0,
       "enablePartitioning": false,
       "enableOrdering": false,
       "precedingRows": 0,
@@ -293,12 +318,67 @@
       "orders": [],
       "limitPreceding": false,
       "followingRows": 0,
-      "windowLowerBound": 0.0,
+      "windowLowerBound": 0,
       "enableLimits": false
     }
   ],
   "computedColumns": [],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "customer_id",
+            "type": "string"
+          },
+          {
+            "name": "birth",
+            "type": "string"
+          },
+          {
+            "name": "birth_parsed",
+            "type": "date"
+          },
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "price_first_item_purchased",
+            "type": "double"
+          },
+          {
+            "name": "gender",
+            "type": "string"
+          },
+          {
+            "name": "revenue",
+            "type": "bigint"
+          },
+          {
+            "name": "join_ip",
+            "type": "string"
+          },
+          {
+            "name": "join_ip_country",
+            "type": "string"
+          },
+          {
+            "name": "join_pages_visited",
+            "type": "double"
+          },
+          {
+            "name": "join_campain",
+            "type": "boolean"
+          },
+          {
+            "name": "join_GDP_cap",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   },
@@ -340,5 +420,6 @@
   "ntile": false,
   "rank": false,
   "denseRank": false,
-  "rowNumber": false
+  "rowNumber": false,
+  "outputColumnNameOverrides": {}
 }
