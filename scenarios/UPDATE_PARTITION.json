@@ -12,11 +12,11 @@
     "lastModifiedOn": 1628264824346
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628264824346
+    "lastModifiedOn": 1628265170985
   },
   "checklists": {
     "checklists": []
@@ -30,7 +30,55 @@
   "triggers": [],
   "reporters": [],
   "params": {
-    "steps": []
+    "steps": [
+      {
+        "id": "custom_python_LMvl5oVvrGyi3UYqsOxUGA",
+        "type": "custom_python",
+        "name": "Step #1",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "script": "import dataiku\nfrom dataiku import pandasutils as pdu\nimport pandas as pd\nimport numpy as np\n\nclient \u003d dataiku.api_client()\nproject \u003d client.get_default_project()\n\nvariables \u003d project.get_variables()\n\nvariables[\u0027standard\u0027][\u0027year\u0027] \u003d np.random.randint(1995, 2000)\n\nproject.set_variables(variables)",
+          "envSelection": {
+            "envMode": "INHERIT"
+          },
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "build_0_true_d_partitions_filtered_with_variable",
+        "type": "build_flowitem",
+        "name": "Step #2",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "partitions_filtered_with_variable",
+              "partitionsSpec": "${year}"
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
+        }
+      }
+    ]
   },
   "automationLocal": false,
   "customFields": {}
