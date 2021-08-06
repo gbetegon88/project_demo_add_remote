@@ -26,8 +26,45 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateParser",
+      "params": {
+        "outCol": "birth_parsed",
+        "formats": [
+          "MM/dd/yyyy"
+        ],
+        "columns": [
+          "birth"
+        ],
+        "timezone_id": "UTC",
+        "appliesTo": "SINGLE_COLUMN",
+        "lang": "auto"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateFormatter",
+      "params": {
+        "inCol": "birth_parsed",
+        "outCol": "birth_parsed_formatted",
+        "format": "yyyy-MM",
+        "timezone_id": "UTC",
+        "lang": "en_US"
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -35,7 +72,14 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "birth_parsed_formatted": 204,
+    "gender": 100,
+    "price_first_item_purchased": 210,
+    "birth": 100,
+    "birth_parsed": 183,
+    "customer_id": 127
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
