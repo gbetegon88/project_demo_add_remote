@@ -1,39 +1,73 @@
 {
+  "columnsSelection": {
+    "mode": "ALL"
+  },
+  "explorationSampling": {
+    "_refreshTrigger": 0,
+    "selection": {
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": 30000,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "maxStoredBytes": -1,
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "timeout": -1
+    },
+    "autoRefreshSample": false
+  },
+  "explorationFilters": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
   "steps": [
     {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
       "type": "DateParser",
       "params": {
         "outCol": "birth_parsed",
-        "lang": "auto",
-        "timezone_id": "UTC",
         "formats": [
           "MM/dd/yyyy"
         ],
-        "appliesTo": "SINGLE_COLUMN",
         "columns": [
           "birth"
-        ]
+        ],
+        "timezone_id": "UTC",
+        "appliesTo": "SINGLE_COLUMN",
+        "lang": "auto"
       },
-      "metaType": "PROCESSOR",
-      "preview": false,
-      "disabled": false,
       "alwaysShowComment": false
     },
     {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
       "type": "DateDifference",
       "params": {
-        "input1": "birth_parsed",
         "output": "since_birth_parsed_days",
         "outputUnit": "YEARS",
+        "input1": "birth_parsed",
         "compareTo": "NOW",
         "reverse": false
       },
-      "metaType": "PROCESSOR",
-      "preview": false,
-      "disabled": false,
       "alwaysShowComment": false
     },
     {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
       "type": "ColumnRenamer",
       "params": {
         "renamings": [
@@ -43,136 +77,121 @@
           }
         ]
       },
-      "metaType": "PROCESSOR",
-      "preview": false,
-      "disabled": false,
       "alwaysShowComment": false
     },
     {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": true,
       "type": "ColumnsSelector",
       "params": {
-        "keep": false,
-        "appliesTo": "COLUMNS",
         "columns": [
           "birth_parsed",
           "birth"
-        ]
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
       },
-      "metaType": "PROCESSOR",
-      "preview": false,
-      "disabled": false,
       "alwaysShowComment": false
     },
     {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
       "type": "MemoryEquiJoiner",
       "params": {
-        "leftCol": "customer_id",
-        "rightInput": "web_last_year",
         "rightCol": "customer_id",
+        "forceRawLevenshteinEngine": false,
+        "copyPrefix": "join_",
+        "sortAlphabetically": false,
+        "language": "english",
+        "leftCol": "customer_id",
         "copyColumns": [
           "ip",
           "pages_visited",
           "campain"
         ],
-        "copyPrefix": "join_",
-        "fuzzy": false,
-        "maxLevenshtein": 1,
-        "forceRawLevenshteinEngine": false,
-        "sortAlphabetically": false,
-        "clearStopWords": false,
         "normalize": false,
-        "stem": false,
-        "language": "english"
+        "maxLevenshtein": 1,
+        "clearStopWords": false,
+        "fuzzy": false,
+        "rightInput": "web_last_year",
+        "stem": false
       },
-      "metaType": "PROCESSOR",
-      "preview": false,
-      "disabled": false,
       "alwaysShowComment": false
     },
     {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
       "type": "GeoIPResolver",
       "params": {
         "inCol": "join_ip",
-        "outColPrefix": "join_ip_",
         "extract_country": true,
-        "extract_countrycode": false,
-        "extract_region": false,
+        "extract_countrycode3": false,
         "extract_city": false,
-        "extract_postalcode": false,
         "extract_latlng": false,
+        "extract_countrycode": false,
+        "extract_postalcode": false,
         "extract_timezone": false,
+        "outColPrefix": "join_ip_",
         "extract_continentcode": false,
-        "extract_geopoint": false,
-        "extract_countrycode3": false
+        "extract_region": false,
+        "extract_geopoint": false
       },
-      "metaType": "PROCESSOR",
-      "preview": false,
-      "disabled": false,
       "alwaysShowComment": false
     },
     {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
       "type": "MemoryEquiJoinerFuzzy",
       "params": {
-        "leftCol": "join_ip_country",
-        "rightInput": "country_gdp",
         "rightCol": "Country",
+        "forceRawLevenshteinEngine": false,
+        "copyPrefix": "join_",
+        "sortAlphabetically": false,
+        "language": "english",
+        "leftCol": "join_ip_country",
         "copyColumns": [
           "GDP_cap"
         ],
-        "copyPrefix": "join_",
-        "fuzzy": true,
-        "maxLevenshtein": 1,
-        "forceRawLevenshteinEngine": false,
-        "sortAlphabetically": false,
-        "clearStopWords": false,
         "normalize": true,
-        "stem": false,
-        "language": "english"
+        "maxLevenshtein": 1,
+        "clearStopWords": false,
+        "fuzzy": true,
+        "rightInput": "country_gdp",
+        "stem": false
       },
-      "metaType": "PROCESSOR",
-      "preview": false,
-      "disabled": false,
       "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
-  "origin": "PREPARE_RECIPE",
-  "columnsSelection": {
-    "mode": "ALL"
+  "previewMode": "ALL_ROWS",
+  "vizSampling": {
+    "_refreshTrigger": 0,
+    "autoRefreshSample": false
   },
+  "analysisColumnData": {},
+  "columnWidthsByName": {
+    "revenue": 100,
+    "join_pages_visited": 150,
+    "join_campain": 105,
+    "gender": 100,
+    "join_ip": 120,
+    "price_first_item_purchased": 210,
+    "join_GDP_cap": 105,
+    "birth": 100,
+    "birth_parsed": 183,
+    "customer_id": 127,
+    "age": 100,
+    "join_ip_country": 141
+  },
+  "sorting": [],
+  "globalSearchQuery": "",
   "coloring": {
     "scheme": "MEANING_AND_STATUS",
     "individualColumns": [],
     "valueColoringMode": "HASH"
-  },
-  "sorting": [],
-  "analysisColumnData": {},
-  "explorationSampling": {
-    "selection": {
-      "maxStoredBytes": -1,
-      "filter": {
-        "distinct": false,
-        "enabled": false
-      },
-      "partitionSelectionMethod": "ALL",
-      "latestPartitionsN": 1,
-      "samplingMethod": "HEAD_SEQUENTIAL",
-      "maxRecords": 30000,
-      "targetRatio": 0.02,
-      "withinFirstN": -1,
-      "maxReadUncompressedBytes": -1
-    },
-    "autoRefreshSample": false,
-    "_refreshTrigger": 0
-  },
-  "vizSampling": {
-    "autoRefreshSample": false,
-    "_refreshTrigger": 0
-  },
-  "exploreUIParams": {
-    "autoRefresh": true
-  },
-  "globalSearchQuery": "",
-  "explorationFilters": [],
-  "previewMode": "ALL_ROWS"
+  }
 }

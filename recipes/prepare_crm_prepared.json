@@ -6,34 +6,50 @@
     "engineType": "DSS",
     "engineParams": {
       "spark": {
-        "pipelineAllowStart": true,
-        "pipelineAllowMerge": true,
+        "readParams": {
+          "mode": "AUTO",
+          "autoModeRepartitionInto": 10,
+          "map": {
+            "crm_last_year": {
+              "repartition": 10
+            },
+            "web_last_year": {
+              "repartition": 10
+            },
+            "country_gdp": {
+              "repartition": 10
+            },
+            "crm_last_year_joined": {
+              "repartition": 10
+            }
+          }
+        },
+        "useGlobalMetastore": false,
+        "useNativeProcessors": true,
         "sparkConfig": {
           "inheritConf": "default",
           "conf": []
         },
-        "readParams": {
-          "map": {
-            "crm_last_year": {
-              "repartition": 10,
-              "cache": false
-            },
-            "web_last_year": {
-              "repartition": 10,
-              "cache": false
-            },
-            "country_gdp": {
-              "repartition": 10,
-              "cache": false
-            },
-            "crm_last_year_joined": {
-              "repartition": 10,
-              "cache": false
-            }
-          }
-        }
+        "executionEngine": "SPARK_SUBMIT",
+        "pipelineAllowStart": true,
+        "pipelineAllowMerge": true,
+        "skipPrerunValidate": false
+      },
+      "hive": {
+        "inheritConf": "default",
+        "hiveconf": [],
+        "executionEngine": "HIVECLI_LOCAL",
+        "addDkuUdf": false,
+        "skipPrerunValidate": false
+      },
+      "impala": {
+        "forceStreamMode": true
       },
       "hadoopConfigKeys": [],
+      "sqlPipelineParams": {
+        "pipelineAllowStart": true,
+        "pipelineAllowMerge": true
+      },
       "maxThreads": 8
     }
   },
@@ -41,6 +57,9 @@
     "kv": {}
   },
   "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
   "inputs": {
     "main": {
       "items": [
@@ -73,14 +92,16 @@
       ]
     }
   },
+  "labels": [],
   "versionTag": {
-    "versionNumber": 8,
+    "versionNumber": 9,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1486141544801
+    "lastModifiedOn": 1628260280563
   },
   "tags": [],
+  "customFields": {},
   "checklists": {
     "checklists": []
   }
