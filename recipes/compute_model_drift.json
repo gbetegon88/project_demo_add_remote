@@ -8,9 +8,7 @@
       "metric_list": [
         "drift_score",
         "drift_model_accuracy",
-        "fugacity",
-        "riskiest_features",
-        "feature_importance"
+        "fugacity"
       ]
     },
     "containerSelection": {
@@ -54,11 +52,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628268258755
+    "lastModifiedOn": 1628268459262
   },
   "creationTag": {
     "versionNumber": 0,
