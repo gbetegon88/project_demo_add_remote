@@ -3,9 +3,9 @@
     "mode": "\u0026\u0026",
     "conditions": [
       {
-        "input": "birth_parsed_formatted",
+        "input": "gender",
         "col": "birth",
-        "string": "${year}",
+        "string": "F",
         "num": 0,
         "operator": "contains"
       }
