@@ -1,0 +1,21 @@
+{
+    "owner": "admin", 
+    "params": {
+        "datasetSmartName": "new_customers_scored"
+    }, 
+    "name": "new_customers_scored", 
+    "tags": [], 
+    "shortDesc": "", 
+    "checklists": {
+        "checklists": []
+    }, 
+    "listed": true, 
+    "type": "dataset_table", 
+    "creationTag": {
+        "lastModifiedBy": {
+            "login": "admin"
+        }, 
+        "lastModifiedOn": 1458756130684
+    }, 
+    "description": ""
+}

@@ -1,0 +1,58 @@
+{
+  "charts": [], 
+  "checklists": {
+    "checklists": []
+  }, 
+  "creationTag": {
+    "lastModifiedBy": {
+      "displayName": "Administrator", 
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1455179216877, 
+    "versionNumber": 0
+  }, 
+  "inputDatasetSmartName": "country_gdp", 
+  "name": "Analyze country_gdp", 
+  "script": {
+    "analysisColumnData": {}, 
+    "charts": [], 
+    "chartsEngine": "LINO", 
+    "coloring": {
+      "individualColumns": [], 
+      "scheme": "MEANING_AND_STATUS", 
+      "valueColoringMode": "HASH"
+    }, 
+    "columnsSelection": {
+      "mode": "ALL"
+    }, 
+    "explorationFilters": [], 
+    "explorationSampling": {
+      "_refreshTrigger": 0, 
+      "autoRefreshSample": false, 
+      "selection": {
+        "maxRecords": 30000, 
+        "partitionSelectionMethod": "ALL", 
+        "samplingMethod": "HEAD_SEQUENTIAL", 
+        "targetRatio": 0.02
+      }
+    }, 
+    "exploreUIParams": {}, 
+    "globalSearchQuery": "", 
+    "previewMode": "ALL_ROWS", 
+    "steps": [], 
+    "tags": [], 
+    "vizSampling": {
+      "_refreshTrigger": 0, 
+      "autoRefreshSample": false
+    }
+  }, 
+  "tags": [], 
+  "versionTag": {
+    "lastModifiedBy": {
+      "displayName": "Administrator", 
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1455179216877, 
+    "versionNumber": 0
+  }
+}

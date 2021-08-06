@@ -1,0 +1,72 @@
+{
+  "checklists": {
+    "checklists": []
+  }, 
+  "flowOptions": {
+    "crossProjectBuildBehavior": "DEFAULT", 
+    "rebuildBehavior": "NORMAL"
+  }, 
+  "formatParams": {
+    "arrayMapFormat": "json", 
+    "charset": "utf8", 
+    "compress": "", 
+    "dateSerializationFormat": "ISO", 
+    "escapeChar": "\\", 
+    "hiveSeparators": [
+      "\u0002", 
+      "\u0003", 
+      "\u0004", 
+      "\u0005", 
+      "\u0006", 
+      "\u0007", 
+      "\b"
+    ], 
+    "normalizeDoubles": false, 
+    "parseHeaderRow": true, 
+    "probableNumberOfRecords": 4, 
+    "quoteChar": "\"", 
+    "separator": ",", 
+    "skipRowsAfterHeader": 0, 
+    "skipRowsBeforeHeader": 0, 
+    "style": "excel"
+  }, 
+  "formatType": "csv", 
+  "managed": false, 
+  "metrics": {
+    "probes": []
+  }, 
+  "params": {}, 
+  "partitioning": {
+    "dimensions": [], 
+    "ignoreNonMatchingFile": false
+  }, 
+  "schema": {
+    "columns": [
+      {
+        "maxLength": -1, 
+        "name": "customer_id", 
+        "type": "string"
+      }, 
+      {
+        "maxLength": -1, 
+        "name": "ip", 
+        "type": "string"
+      }, 
+      {
+        "maxLength": -1, 
+        "name": "pages_visited", 
+        "type": "string"
+      }, 
+      {
+        "maxLength": -1, 
+        "name": "campain", 
+        "type": "string"
+      }
+    ], 
+    "userModified": false
+  }, 
+  "tags": [
+    "creator_admin"
+  ], 
+  "type": "UploadedFiles"
+}

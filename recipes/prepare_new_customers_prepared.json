@@ -1,0 +1,83 @@
+{
+  "type": "shaker",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "engineType": "DSS",
+    "engineParams": {
+      "spark": {
+        "pipelineAllowStart": true,
+        "pipelineAllowMerge": true,
+        "sparkConfig": {
+          "inheritConf": "default",
+          "conf": []
+        },
+        "readParams": {
+          "map": {
+            "new_customers": {
+              "repartition": 10,
+              "cache": false
+            },
+            "web_new_visitors": {
+              "repartition": 10,
+              "cache": false
+            },
+            "country_gdp": {
+              "repartition": 10,
+              "cache": false
+            }
+          }
+        }
+      },
+      "hadoopConfigKeys": [],
+      "maxThreads": 8
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "new_customers",
+          "deps": []
+        }
+      ]
+    },
+    "scriptDeps": {
+      "items": [
+        {
+          "ref": "web_new_visitors",
+          "deps": []
+        },
+        {
+          "ref": "country_gdp",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "new_customers_prepared",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 5,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1510826406703
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

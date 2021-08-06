@@ -1,0 +1,79 @@
+{
+  "checklists": {
+    "checklists": []
+  }, 
+  "customMeta": {
+    "kv": {}
+  }, 
+  "flowOptions": {
+    "crossProjectBuildBehavior": "DEFAULT", 
+    "rebuildBehavior": "NORMAL"
+  }, 
+  "formatParams": {
+    "arrayMapFormat": "json", 
+    "charset": "utf8", 
+    "compress": "", 
+    "dateSerializationFormat": "ISO", 
+    "escapeChar": "\\", 
+    "hiveSeparators": [
+      "\u0002", 
+      "\u0003", 
+      "\u0004", 
+      "\u0005", 
+      "\u0006", 
+      "\u0007", 
+      "\b"
+    ], 
+    "normalizeDoubles": false, 
+    "parseHeaderRow": true, 
+    "probableNumberOfRecords": 4, 
+    "quoteChar": "\"", 
+    "separator": ",", 
+    "skipRowsAfterHeader": 0, 
+    "skipRowsBeforeHeader": 0, 
+    "style": "excel"
+  }, 
+  "formatType": "csv", 
+  "managed": false, 
+  "metrics": {
+    "probes": []
+  }, 
+  "params": {}, 
+  "partitioning": {
+    "dimensions": [], 
+    "ignoreNonMatchingFile": false
+  }, 
+  "schema": {
+    "columns": [
+      {
+        "maxLength": -1, 
+        "name": "customer_id", 
+        "timestampNoTzAsDate": false, 
+        "type": "string"
+      }, 
+      {
+        "maxLength": -1, 
+        "name": "birth", 
+        "timestampNoTzAsDate": false, 
+        "type": "string"
+      }, 
+      {
+        "maxLength": -1, 
+        "name": "price_first_item_purchased", 
+        "timestampNoTzAsDate": false, 
+        "type": "string"
+      }, 
+      {
+        "maxLength": -1, 
+        "name": "gender", 
+        "timestampNoTzAsDate": false, 
+        "type": "string"
+      }
+    ], 
+    "userModified": false
+  }, 
+  "tags": [
+    "creator_admin"
+  ], 
+  "type": "UploadedFiles"
+}

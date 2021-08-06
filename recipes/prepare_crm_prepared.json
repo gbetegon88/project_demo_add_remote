@@ -1,0 +1,87 @@
+{
+  "type": "shaker",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "engineType": "DSS",
+    "engineParams": {
+      "spark": {
+        "pipelineAllowStart": true,
+        "pipelineAllowMerge": true,
+        "sparkConfig": {
+          "inheritConf": "default",
+          "conf": []
+        },
+        "readParams": {
+          "map": {
+            "crm_last_year": {
+              "repartition": 10,
+              "cache": false
+            },
+            "web_last_year": {
+              "repartition": 10,
+              "cache": false
+            },
+            "country_gdp": {
+              "repartition": 10,
+              "cache": false
+            },
+            "crm_last_year_joined": {
+              "repartition": 10,
+              "cache": false
+            }
+          }
+        }
+      },
+      "hadoopConfigKeys": [],
+      "maxThreads": 8
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "crm_last_year",
+          "deps": []
+        }
+      ]
+    },
+    "scriptDeps": {
+      "items": [
+        {
+          "ref": "web_last_year",
+          "deps": []
+        },
+        {
+          "ref": "country_gdp",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "crm_prepared",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 8,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1486141544801
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

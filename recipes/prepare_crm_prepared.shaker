@@ -1,0 +1,178 @@
+{
+  "steps": [
+    {
+      "type": "DateParser",
+      "params": {
+        "outCol": "birth_parsed",
+        "lang": "auto",
+        "timezone_id": "UTC",
+        "formats": [
+          "MM/dd/yyyy"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "columns": [
+          "birth"
+        ]
+      },
+      "metaType": "PROCESSOR",
+      "preview": false,
+      "disabled": false,
+      "alwaysShowComment": false
+    },
+    {
+      "type": "DateDifference",
+      "params": {
+        "input1": "birth_parsed",
+        "output": "since_birth_parsed_days",
+        "outputUnit": "YEARS",
+        "compareTo": "NOW",
+        "reverse": false
+      },
+      "metaType": "PROCESSOR",
+      "preview": false,
+      "disabled": false,
+      "alwaysShowComment": false
+    },
+    {
+      "type": "ColumnRenamer",
+      "params": {
+        "renamings": [
+          {
+            "from": "since_birth_parsed_days",
+            "to": "age"
+          }
+        ]
+      },
+      "metaType": "PROCESSOR",
+      "preview": false,
+      "disabled": false,
+      "alwaysShowComment": false
+    },
+    {
+      "type": "ColumnsSelector",
+      "params": {
+        "keep": false,
+        "appliesTo": "COLUMNS",
+        "columns": [
+          "birth_parsed",
+          "birth"
+        ]
+      },
+      "metaType": "PROCESSOR",
+      "preview": false,
+      "disabled": false,
+      "alwaysShowComment": false
+    },
+    {
+      "type": "MemoryEquiJoiner",
+      "params": {
+        "leftCol": "customer_id",
+        "rightInput": "web_last_year",
+        "rightCol": "customer_id",
+        "copyColumns": [
+          "ip",
+          "pages_visited",
+          "campain"
+        ],
+        "copyPrefix": "join_",
+        "fuzzy": false,
+        "maxLevenshtein": 1,
+        "forceRawLevenshteinEngine": false,
+        "sortAlphabetically": false,
+        "clearStopWords": false,
+        "normalize": false,
+        "stem": false,
+        "language": "english"
+      },
+      "metaType": "PROCESSOR",
+      "preview": false,
+      "disabled": false,
+      "alwaysShowComment": false
+    },
+    {
+      "type": "GeoIPResolver",
+      "params": {
+        "inCol": "join_ip",
+        "outColPrefix": "join_ip_",
+        "extract_country": true,
+        "extract_countrycode": false,
+        "extract_region": false,
+        "extract_city": false,
+        "extract_postalcode": false,
+        "extract_latlng": false,
+        "extract_timezone": false,
+        "extract_continentcode": false,
+        "extract_geopoint": false,
+        "extract_countrycode3": false
+      },
+      "metaType": "PROCESSOR",
+      "preview": false,
+      "disabled": false,
+      "alwaysShowComment": false
+    },
+    {
+      "type": "MemoryEquiJoinerFuzzy",
+      "params": {
+        "leftCol": "join_ip_country",
+        "rightInput": "country_gdp",
+        "rightCol": "Country",
+        "copyColumns": [
+          "GDP_cap"
+        ],
+        "copyPrefix": "join_",
+        "fuzzy": true,
+        "maxLevenshtein": 1,
+        "forceRawLevenshteinEngine": false,
+        "sortAlphabetically": false,
+        "clearStopWords": false,
+        "normalize": true,
+        "stem": false,
+        "language": "english"
+      },
+      "metaType": "PROCESSOR",
+      "preview": false,
+      "disabled": false,
+      "alwaysShowComment": false
+    }
+  ],
+  "maxProcessedMemTableBytes": -1,
+  "origin": "PREPARE_RECIPE",
+  "columnsSelection": {
+    "mode": "ALL"
+  },
+  "coloring": {
+    "scheme": "MEANING_AND_STATUS",
+    "individualColumns": [],
+    "valueColoringMode": "HASH"
+  },
+  "sorting": [],
+  "analysisColumnData": {},
+  "explorationSampling": {
+    "selection": {
+      "maxStoredBytes": -1,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "partitionSelectionMethod": "ALL",
+      "latestPartitionsN": 1,
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "maxRecords": 30000,
+      "targetRatio": 0.02,
+      "withinFirstN": -1,
+      "maxReadUncompressedBytes": -1
+    },
+    "autoRefreshSample": false,
+    "_refreshTrigger": 0
+  },
+  "vizSampling": {
+    "autoRefreshSample": false,
+    "_refreshTrigger": 0
+  },
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "globalSearchQuery": "",
+  "explorationFilters": [],
+  "previewMode": "ALL_ROWS"
+}

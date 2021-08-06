@@ -1,0 +1,49 @@
+{
+  "checklists": {
+    "checklists": []
+  }, 
+  "customMeta": {
+    "kv": {}
+  }, 
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "deps": [], 
+          "ref": "new_customers_prepared"
+        }
+      ]
+    }, 
+    "model": {
+      "items": [
+        {
+          "deps": [], 
+          "ref": "8A6fb5O8"
+        }
+      ]
+    }
+  }, 
+  "neverRecomputeExistingPartitions": false, 
+  "optionalDependencies": false, 
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "appendMode": false, 
+          "ref": "new_customers_scored"
+        }
+      ]
+    }
+  }, 
+  "params": {}, 
+  "redispatchPartitioning": false, 
+  "tags": [], 
+  "type": "prediction_scoring", 
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1510826507744, 
+    "versionNumber": 7
+  }
+}

@@ -1,0 +1,1892 @@
+{
+    "initiator": "admin", 
+    "name": "Predict Country", 
+    "weight": {
+        "weightMethod": "CLASS_WEIGHT"
+    }, 
+    "predictionDisplayScript": {
+        "coloring": {
+            "scheme": "MEANING_AND_STATUS", 
+            "valueColoringMode": "HASH", 
+            "individualColumns": []
+        }, 
+        "columnsSelection": {
+            "mode": "ALL"
+        }, 
+        "tags": [], 
+        "analysisColumnData": {}, 
+        "charts": [], 
+        "exploreUIParams": {}, 
+        "vizSampling": {
+            "autoRefreshSample": false, 
+            "_refreshTrigger": 0
+        }, 
+        "steps": [], 
+        "globalSearchQuery": "", 
+        "previewMode": "ALL_ROWS", 
+        "chartsEngine": "LINO", 
+        "explorationSampling": {
+            "autoRefreshSample": false, 
+            "selection": {
+                "maxRecords": 30000, 
+                "partitionSelectionMethod": "ALL", 
+                "targetRatio": 0.02, 
+                "samplingMethod": "HEAD_SEQUENTIAL"
+            }, 
+            "_refreshTrigger": 0
+        }, 
+        "explorationFilters": []
+    }, 
+    "backendType": "PY_MEMORY", 
+    "predictionDisplayCharts": [], 
+    "predictionType": "MULTICLASS", 
+    "sparkParams": {
+        "pipelineAllowMerge": null, 
+        "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK", 
+        "sparkConf": null, 
+        "sparkRepartitionNonHDFS": 1, 
+        "pipelineAllowStart": null
+    }, 
+    "preprocessing": {
+        "deduplication": {
+            "enabled": false
+        }, 
+        "reduce": {
+            "enable": false, 
+            "disable": true, 
+            "kept_variance": 0.0
+        }, 
+        "numerical_combinations": {
+            "pairwiseLinear": false, 
+            "polynomialInteraction": false
+        }, 
+        "target_remapping": [
+            {
+                "mappedValue": 0, 
+                "sourceValue": "laos", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 1, 
+                "sourceValue": "ireland", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 2, 
+                "sourceValue": "gambia the", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 3, 
+                "sourceValue": "thailand", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 4, 
+                "sourceValue": "romania", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 5, 
+                "sourceValue": "eritrea", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 6, 
+                "sourceValue": "tanzania", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 7, 
+                "sourceValue": "brunei", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 8, 
+                "sourceValue": "el salvador", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 9, 
+                "sourceValue": "pakistan", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 10, 
+                "sourceValue": "kiribati", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 11, 
+                "sourceValue": "indonesia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 12, 
+                "sourceValue": "tajikistan", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 13, 
+                "sourceValue": "kyrgyzstan", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 14, 
+                "sourceValue": "micronesia fed. sts.", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 15, 
+                "sourceValue": "united arab emirates", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 16, 
+                "sourceValue": "turkmenistan", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 17, 
+                "sourceValue": "estonia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 18, 
+                "sourceValue": "azerbaijan", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 19, 
+                "sourceValue": "jordan", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 20, 
+                "sourceValue": "east timor", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 21, 
+                "sourceValue": "croatia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 22, 
+                "sourceValue": "finland", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 23, 
+                "sourceValue": "rwanda", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 24, 
+                "sourceValue": "qatar", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 25, 
+                "sourceValue": "fiji", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 26, 
+                "sourceValue": "sri lanka", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 27, 
+                "sourceValue": "malawi", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 28, 
+                "sourceValue": "lebanon", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 29, 
+                "sourceValue": "niger", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 30, 
+                "sourceValue": "mauritania", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 31, 
+                "sourceValue": "iceland", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 32, 
+                "sourceValue": "malta", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 33, 
+                "sourceValue": "serbia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 34, 
+                "sourceValue": "kosovo[4]", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 35, 
+                "sourceValue": "mozambique", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 36, 
+                "sourceValue": "algeria", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 37, 
+                "sourceValue": "bolivia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 38, 
+                "sourceValue": "austria", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 39, 
+                "sourceValue": "south korea", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 40, 
+                "sourceValue": "zimbabwe", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 41, 
+                "sourceValue": "angola", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 42, 
+                "sourceValue": "peru", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 43, 
+                "sourceValue": "sierra leone", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 44, 
+                "sourceValue": "bahrain", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 45, 
+                "sourceValue": "yemen", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 46, 
+                "sourceValue": "united kingdom", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 47, 
+                "sourceValue": "norway", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 48, 
+                "sourceValue": "bangladesh", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 49, 
+                "sourceValue": "bosnia and herzegovina", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 50, 
+                "sourceValue": "bhutan", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 51, 
+                "sourceValue": "india", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 52, 
+                "sourceValue": "france", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 53, 
+                "sourceValue": "lithuania", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 54, 
+                "sourceValue": "palau", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 55, 
+                "sourceValue": "uruguay", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 56, 
+                "sourceValue": "italy", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 57, 
+                "sourceValue": "s\u00e3o tom\u00e9 and pr\u00edncipe", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 58, 
+                "sourceValue": "bulgaria", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 59, 
+                "sourceValue": "sweden", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 60, 
+                "sourceValue": "hungary", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 61, 
+                "sourceValue": "kazakhstan", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 62, 
+                "sourceValue": "trinidad and tobago", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 63, 
+                "sourceValue": "guinea", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 64, 
+                "sourceValue": "oman", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 65, 
+                "sourceValue": "taiwan", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 66, 
+                "sourceValue": "mongolia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 67, 
+                "sourceValue": "vietnam", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 68, 
+                "sourceValue": "dominica", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 69, 
+                "sourceValue": "honduras", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 70, 
+                "sourceValue": "cyprus", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 71, 
+                "sourceValue": "new zealand", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 72, 
+                "sourceValue": "senegal", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 73, 
+                "sourceValue": "luxembourg", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 74, 
+                "sourceValue": "poland", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 75, 
+                "sourceValue": "brazil", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 76, 
+                "sourceValue": "russia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 77, 
+                "sourceValue": "barbados", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 78, 
+                "sourceValue": "paraguay", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 79, 
+                "sourceValue": "slovenia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 80, 
+                "sourceValue": "mali", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 81, 
+                "sourceValue": "belize", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 82, 
+                "sourceValue": "albania", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 83, 
+                "sourceValue": "solomon islands", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 84, 
+                "sourceValue": "south sudan", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 85, 
+                "sourceValue": "swaziland", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 86, 
+                "sourceValue": "hong kong", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 87, 
+                "sourceValue": "jamaica", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 88, 
+                "sourceValue": "mauritius", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 89, 
+                "sourceValue": "kenya", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 90, 
+                "sourceValue": "marshall islands", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 91, 
+                "sourceValue": "saint lucia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 92, 
+                "sourceValue": "morocco", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 93, 
+                "sourceValue": "slovakia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 94, 
+                "sourceValue": "macedonia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 95, 
+                "sourceValue": "madagascar", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 96, 
+                "sourceValue": "spain", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 97, 
+                "sourceValue": "ghana", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 98, 
+                "sourceValue": "colombia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 99, 
+                "sourceValue": "venezuela", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 100, 
+                "sourceValue": "congo dem. rep.", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 101, 
+                "sourceValue": "zambia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 102, 
+                "sourceValue": "chad", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 103, 
+                "sourceValue": "germany", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 104, 
+                "sourceValue": "uzbekistan", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 105, 
+                "sourceValue": "portugal", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 106, 
+                "sourceValue": "cambodia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 107, 
+                "sourceValue": "nepal", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 108, 
+                "sourceValue": "china", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 109, 
+                "sourceValue": "vanuatu", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 110, 
+                "sourceValue": "canada", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 111, 
+                "sourceValue": "ecuador", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 112, 
+                "sourceValue": "afghanistan", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 113, 
+                "sourceValue": "mexico", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 114, 
+                "sourceValue": "georgia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 115, 
+                "sourceValue": "nigeria", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 116, 
+                "sourceValue": "belgium", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 117, 
+                "sourceValue": "malaysia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 118, 
+                "sourceValue": "equatorial guinea", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 119, 
+                "sourceValue": "togo", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 120, 
+                "sourceValue": "samoa", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 121, 
+                "sourceValue": "ethiopia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 122, 
+                "sourceValue": "united states", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 123, 
+                "sourceValue": "gabon", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 124, 
+                "sourceValue": "antigua and barbuda", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 125, 
+                "sourceValue": "saint vincent and the grenadines", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 126, 
+                "sourceValue": "australia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 127, 
+                "sourceValue": "liberia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 128, 
+                "sourceValue": "czech republic", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 129, 
+                "sourceValue": "grenada", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 130, 
+                "sourceValue": "central african republic", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 131, 
+                "sourceValue": "cape verde", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 132, 
+                "sourceValue": "philippines", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 133, 
+                "sourceValue": "papua new guinea", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 134, 
+                "sourceValue": "maldives", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 135, 
+                "sourceValue": "uganda", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 136, 
+                "sourceValue": "montenegro", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 137, 
+                "sourceValue": "guyana", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 138, 
+                "sourceValue": "cameroon", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 139, 
+                "sourceValue": "burkina faso", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 140, 
+                "sourceValue": "belarus", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 141, 
+                "sourceValue": "south africa", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 142, 
+                "sourceValue": "benin", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 143, 
+                "sourceValue": "saint kitts and nevis", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 144, 
+                "sourceValue": "burma", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 145, 
+                "sourceValue": "israel", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 146, 
+                "sourceValue": "seychelles", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 147, 
+                "sourceValue": "singapore", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 148, 
+                "sourceValue": "argentina", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 149, 
+                "sourceValue": "chile", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 150, 
+                "sourceValue": "japan", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 151, 
+                "sourceValue": "burundi", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 152, 
+                "sourceValue": "san marino", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 153, 
+                "sourceValue": "costa rica", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 154, 
+                "sourceValue": "guatemala", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 155, 
+                "sourceValue": "switzerland", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 156, 
+                "sourceValue": "haiti", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 157, 
+                "sourceValue": "congo rep.", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 158, 
+                "sourceValue": "moldova", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 159, 
+                "sourceValue": "botswana", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 160, 
+                "sourceValue": "iran", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 161, 
+                "sourceValue": "armenia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 162, 
+                "sourceValue": "greece", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 163, 
+                "sourceValue": "guinea-bissau", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 164, 
+                "sourceValue": "djibouti", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 165, 
+                "sourceValue": "nicaragua", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 166, 
+                "sourceValue": "lesotho", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 167, 
+                "sourceValue": "latvia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 168, 
+                "sourceValue": "iraq", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 169, 
+                "sourceValue": "comoros", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 170, 
+                "sourceValue": "egypt", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 171, 
+                "sourceValue": "netherlands", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 172, 
+                "sourceValue": "panama", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 173, 
+                "sourceValue": "libya", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 174, 
+                "sourceValue": "tuvalu", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 175, 
+                "sourceValue": "sudan", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 176, 
+                "sourceValue": "suriname", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 177, 
+                "sourceValue": "ukraine", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 178, 
+                "sourceValue": "tonga", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 179, 
+                "sourceValue": "tunisia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 180, 
+                "sourceValue": "bahamas the", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 181, 
+                "sourceValue": "denmark", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 182, 
+                "sourceValue": "turkey", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 183, 
+                "sourceValue": "dominican republic", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 184, 
+                "sourceValue": "kuwait", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 185, 
+                "sourceValue": "c\u00f4te d'ivoire", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 186, 
+                "sourceValue": "namibia", 
+                "sampleFreq": 1
+            }, 
+            {
+                "mappedValue": 187, 
+                "sourceValue": "saudi arabia", 
+                "sampleFreq": 1
+            }
+        ], 
+        "per_feature": {
+            "Country": {
+                "type": "CATEGORY", 
+                "state": {
+                    "dssWantsToModify": false, 
+                    "userModified": false, 
+                    "recordedMeaning": "Text", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "TARGET", 
+                "max_nb_categories": 100, 
+                "hash_whole_categories": false
+            }, 
+            "GDP_cap": {
+                "generate_derivative": false, 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "dssWantsToModify": false, 
+                    "userModified": false, 
+                    "recordedMeaning": "LongMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "REJECT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "autoReason": "REJECT_IDENTIFIER", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }
+        }, 
+        "featureSelection": {
+            "kind": "NONE", 
+            "filterOnlyKBestNbToKeep": 10
+        }, 
+        "feature_generation": {
+            "manual_interactions": {
+                "interactions": []
+            }, 
+            "pairwise_linear": {
+                "behavior": "DISABLED"
+            }, 
+            "polynomial_combinations": {
+                "behavior": "DISABLED"
+            }
+        }
+    }, 
+    "splitParams": {
+        "kfold": false, 
+        "splitBeforePrepare": true, 
+        "instanceIdRefresher": 0, 
+        "ttPolicy": "SPLIT_SINGLE_DATASET", 
+        "ssdSplitMode": "RANDOM", 
+        "ssdSelection": {
+            "maxRecords": 100000, 
+            "partitionSelectionMethod": "ALL", 
+            "targetRatio": 0.02, 
+            "samplingMethod": "HEAD_SEQUENTIAL"
+        }, 
+        "ssdTrainingRatio": 0.8, 
+        "ssdSeed": 1337, 
+        "nFolds": 5, 
+        "subSamplingSeed": 1337
+    }, 
+    "modeling": {
+        "gbt_max_feature_prop": 0.1, 
+        "lasso_regression": {
+            "enabled": false, 
+            "alphaMode": "AUTO_CV"
+        }, 
+        "gbt_selection_mode": "auto", 
+        "ridge_regression": {
+            "alpha": {
+                "values": [
+                    0.1, 
+                    1.0, 
+                    3.0
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1e-23
+                }, 
+                "range": {
+                    "scaling": "LOGARITHMIC", 
+                    "max": 3.0, 
+                    "nbValues": 3, 
+                    "min": 0.1
+                }
+            }, 
+            "alphaMode": "MANUAL", 
+            "enabled": false
+        }, 
+        "gbt_min_samples_leaf": 3, 
+        "logistic_regression": {
+            "penalty": {
+                "values": {
+                    "l2": {
+                        "enabled": false
+                    }, 
+                    "l1": {
+                        "enabled": true
+                    }
+                }
+            }, 
+            "C": {
+                "values": [
+                    0.1
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1e-23
+                }, 
+                "range": {
+                    "scaling": "LOGARITHMIC", 
+                    "max": 100.0, 
+                    "nbValues": 3, 
+                    "min": 0.01
+                }
+            }, 
+            "enabled": true
+        }, 
+        "glm_h2o": {
+            "alphas": [
+                0.5
+            ], 
+            "standardize": true, 
+            "family": "gaussian", 
+            "beta_epsilon": 0.0001, 
+            "max_iter": 10000, 
+            "enabled": false, 
+            "tweedie_variance_power": 0.0, 
+            "n_folds": 0, 
+            "lambdas": [
+                1e-05
+            ]
+        }, 
+        "custom_python": [
+            {
+                "enabled": false
+            }
+        ], 
+        "gbt_classification": {
+            "loss": {
+                "values": {
+                    "exponential": {
+                        "enabled": false
+                    }, 
+                    "deviance": {
+                        "enabled": true
+                    }
+                }
+            }, 
+            "learning_rate": {
+                "values": [
+                    0.1
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": 1.0, 
+                    "min": 1e-23
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 0.5, 
+                    "nbValues": 3, 
+                    "min": 0.05
+                }
+            }, 
+            "enabled": false, 
+            "min_samples_leaf": {
+                "values": [
+                    3
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 20, 
+                    "nbValues": 3, 
+                    "min": 1
+                }
+            }, 
+            "n_estimators": {
+                "values": [
+                    100
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 200, 
+                    "nbValues": 3, 
+                    "min": 80
+                }
+            }, 
+            "max_features": {
+                "values": [
+                    0
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 20, 
+                    "nbValues": 3, 
+                    "min": 1
+                }
+            }, 
+            "max_depth": {
+                "values": [
+                    3
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 8, 
+                    "nbValues": 3, 
+                    "min": 3
+                }
+            }
+        }, 
+        "gbt_regression": {
+            "loss": {
+                "values": {
+                    "lad": {
+                        "enabled": false
+                    }, 
+                    "huber": {
+                        "enabled": false
+                    }, 
+                    "ls": {
+                        "enabled": true
+                    }
+                }
+            }, 
+            "learning_rate": {
+                "values": [
+                    0.1
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": 1.0, 
+                    "min": 1e-23
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 0.5, 
+                    "nbValues": 3, 
+                    "min": 0.05
+                }
+            }, 
+            "enabled": false, 
+            "min_samples_leaf": {
+                "values": [
+                    3
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 20, 
+                    "nbValues": 3, 
+                    "min": 1
+                }
+            }, 
+            "n_estimators": {
+                "values": [
+                    100
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 200, 
+                    "nbValues": 3, 
+                    "min": 80
+                }
+            }, 
+            "max_features": {
+                "values": [
+                    0
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 20, 
+                    "nbValues": 3, 
+                    "min": 1
+                }
+            }, 
+            "max_depth": {
+                "values": [
+                    3
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 8, 
+                    "nbValues": 3, 
+                    "min": 3
+                }
+            }
+        }, 
+        "decision_tree_classification": {
+            "splitter": {
+                "values": {
+                    "random": {
+                        "enabled": false
+                    }, 
+                    "best": {
+                        "enabled": true
+                    }
+                }
+            }, 
+            "criterion": {
+                "values": {
+                    "gini": {
+                        "enabled": true
+                    }, 
+                    "entropy": {
+                        "enabled": false
+                    }
+                }
+            }, 
+            "max_depth": {
+                "values": [
+                    5
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 8, 
+                    "nbValues": 3, 
+                    "min": 3
+                }
+            }, 
+            "enabled": false, 
+            "min_samples_leaf": {
+                "values": [
+                    1
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 20, 
+                    "nbValues": 3, 
+                    "min": 1
+                }
+            }
+        }, 
+        "grid_search": true, 
+        "random_forest_regression": {
+            "n_jobs": 1, 
+            "max_tree_depth": {
+                "values": [
+                    8
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 10, 
+                    "nbValues": 3, 
+                    "min": 5
+                }
+            }, 
+            "enabled": false, 
+            "min_samples_leaf": {
+                "values": [
+                    3
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 20, 
+                    "nbValues": 3, 
+                    "min": 3
+                }
+            }, 
+            "mode": "auto", 
+            "max_features": {
+                "values": [
+                    0
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 20, 
+                    "nbValues": 3, 
+                    "min": 1
+                }
+            }
+        }, 
+        "mllib_linreg": {
+            "max_iter": 10, 
+            "enabled": false, 
+            "reg_param": {
+                "values": [
+                    0.1
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 0.0
+                }, 
+                "range": {
+                    "scaling": "LOGARITHMIC", 
+                    "max": 10, 
+                    "nbValues": 3, 
+                    "min": 0.001
+                }
+            }, 
+            "enet_param": {
+                "values": [
+                    1.0
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 0.0
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 1.0, 
+                    "nbValues": 3, 
+                    "min": 0.0
+                }
+            }
+        }, 
+        "mllib_gbt": {
+            "cache_node_ids": false, 
+            "subset_strategy": "auto", 
+            "subsampling_rate": 1.0, 
+            "impurity": "gini", 
+            "max_bins": 32, 
+            "enabled": false, 
+            "step_size": {
+                "values": [
+                    0.1
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": 1, 
+                    "min": 1e-23
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 0.5, 
+                    "nbValues": 3, 
+                    "min": 0.05
+                }
+            }, 
+            "checkpoint_interval": 10, 
+            "min_instance_per_node": 1, 
+            "min_info_gain": 0.0, 
+            "max_memory_mb": 256, 
+            "num_trees": {
+                "values": [
+                    20
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 50, 
+                    "nbValues": 3, 
+                    "min": 10
+                }
+            }, 
+            "seed": 1337, 
+            "max_depth": {
+                "values": [
+                    5
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 8, 
+                    "nbValues": 3, 
+                    "min": 3
+                }
+            }
+        }, 
+        "gbm_h2o": {
+            "learn_rate": 0.1, 
+            "ntrees": 50, 
+            "family": "AUTO", 
+            "nbins": 20, 
+            "enabled": false, 
+            "min_rows": 10, 
+            "grid_parallelism": -1, 
+            "max_depth": 5
+        }, 
+        "gbt_max_features": 0, 
+        "metrics": {
+            "customEvaluationMetricNeedsProba": false, 
+            "evaluationMetric": "ROC_AUC", 
+            "liftPoint": 0.4, 
+            "customEvaluationMetricGIB": true, 
+            "costMatrixWeights": {
+                "tpGain": 1.0, 
+                "fnGain": 0.0, 
+                "fpGain": -0.3, 
+                "tnGain": 0.0
+            }
+        }, 
+        "leastsquare_regression": {
+            "enabled": false
+        }, 
+        "mllib_logit": {
+            "max_iter": 10, 
+            "enabled": false, 
+            "reg_param": {
+                "values": [
+                    0.1
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 0.0
+                }, 
+                "range": {
+                    "scaling": "LOGARITHMIC", 
+                    "max": 10, 
+                    "nbValues": 3, 
+                    "min": 0.001
+                }
+            }, 
+            "enet_param": {
+                "values": [
+                    1.0
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 0.0
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 1.0, 
+                    "nbValues": 3, 
+                    "min": 0.0
+                }
+            }
+        }, 
+        "svc_classifier": {
+            "kernel": {
+                "values": {
+                    "rbf": {
+                        "enabled": true
+                    }, 
+                    "linear": {
+                        "enabled": false
+                    }, 
+                    "poly": {
+                        "enabled": false
+                    }, 
+                    "sigmoid": {
+                        "enabled": false
+                    }
+                }
+            }, 
+            "C": {
+                "values": [
+                    1.0
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1e-23
+                }, 
+                "range": {
+                    "scaling": "LOGARITHMIC", 
+                    "max": 10.0, 
+                    "nbValues": 3, 
+                    "min": 0.1
+                }
+            }, 
+            "max_iter": -1, 
+            "enabled": false, 
+            "custom_gamma": {
+                "values": [
+                    0.001
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1e-23
+                }, 
+                "range": {
+                    "scaling": "LOGARITHMIC", 
+                    "max": 1.0, 
+                    "nbValues": 3, 
+                    "min": 0.0001
+                }
+            }, 
+            "tol": 0.001, 
+            "coef0": 0.0, 
+            "gamma": {
+                "values": {
+                    "auto": {
+                        "enabled": true
+                    }, 
+                    "scale": {
+                        "enabled": false
+                    }, 
+                    "custom": {
+                        "enabled": false
+                    }
+                }
+            }
+        }, 
+        "deep_learning_h2o": {
+            "rate_annealing": 0.0, 
+            "epsilon": 1e-06, 
+            "enabled": false, 
+            "epochs": 10.0, 
+            "rate": 1e-05, 
+            "input_dropout_ratio": 0.0, 
+            "l2": 0.0, 
+            "rho": 0.95, 
+            "l1": 0.0, 
+            "hidden": "100,100", 
+            "adaptative_rate": true
+        }, 
+        "distributed_rf_h2o": {
+            "nbins": 20, 
+            "build_tree_one_node": false, 
+            "ntrees": 50, 
+            "enabled": false, 
+            "min_rows": 1, 
+            "sample_rate": 0.6666, 
+            "max_depth": 5
+        }, 
+        "rf_selection_mode": "auto", 
+        "sgd_classifier": {
+            "n_iter": 5320, 
+            "n_jobs": 1, 
+            "loss": {
+                "values": {
+                    "modified_huber": {
+                        "enabled": false
+                    }, 
+                    "log": {
+                        "enabled": true
+                    }
+                }
+            }, 
+            "l1_ratio": 0.15, 
+            "enabled": false, 
+            "penalty": {
+                "values": {
+                    "elasticnet": {
+                        "enabled": false
+                    }, 
+                    "l2": {
+                        "enabled": false
+                    }, 
+                    "l1": {
+                        "enabled": true
+                    }
+                }
+            }, 
+            "alpha": {
+                "values": [
+                    0.1, 
+                    0.01, 
+                    0.001
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1e-23
+                }, 
+                "range": {
+                    "scaling": "LOGARITHMIC", 
+                    "max": 0.001, 
+                    "nbValues": 3, 
+                    "min": 1e-05
+                }
+            }
+        }, 
+        "mllib_rf": {
+            "cache_node_ids": false, 
+            "subset_strategy": "auto", 
+            "subsampling_rate": 1.0, 
+            "impurity": "gini", 
+            "max_bins": 32, 
+            "enabled": false, 
+            "step_size": {
+                "values": [
+                    0.1
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": 1, 
+                    "min": 1e-23
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 0.5, 
+                    "nbValues": 3, 
+                    "min": 0.05
+                }
+            }, 
+            "checkpoint_interval": 10, 
+            "min_instance_per_node": 1, 
+            "min_info_gain": 0.0, 
+            "max_memory_mb": 256, 
+            "num_trees": {
+                "values": [
+                    20
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 50, 
+                    "nbValues": 3, 
+                    "min": 10
+                }
+            }, 
+            "seed": 1337, 
+            "max_depth": {
+                "values": [
+                    5
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 8, 
+                    "nbValues": 3, 
+                    "min": 3
+                }
+            }
+        }, 
+        "random_forest_classification": {
+            "n_jobs": 1, 
+            "max_tree_depth": {
+                "values": [
+                    9
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 10, 
+                    "nbValues": 3, 
+                    "min": 5
+                }
+            }, 
+            "enabled": true, 
+            "min_samples_leaf": {
+                "values": [
+                    1
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 20, 
+                    "nbValues": 3, 
+                    "min": 3
+                }
+            }, 
+            "mode": "auto", 
+            "max_features": {
+                "values": [
+                    0
+                ], 
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }, 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 20, 
+                    "nbValues": 3, 
+                    "min": 1
+                }
+            }
+        }
+    }, 
+    "taskType": "PREDICTION", 
+    "id": "UCLskgts", 
+    "targetVariable": "Country"
+}

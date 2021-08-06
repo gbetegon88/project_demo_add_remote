@@ -1,0 +1,17 @@
+{
+    "outputProbabilities": true, 
+    "keptInputColumns": [], 
+    "overrideModelSpecifiedThreshold": false, 
+    "backendType": "PY_MEMORY", 
+    "filterInputColumns": false, 
+    "forceOriginalEngine": false, 
+    "sparkParams": {
+        "pipelineAllowStart": null, 
+        "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK", 
+        "sparkConf": null, 
+        "sparkRepartitionNonHDFS": 1, 
+        "pipelineAllowMerge": null
+    }, 
+    "forcedClassifierThreshold": 0, 
+    "outputProbaPercentiles": false
+}

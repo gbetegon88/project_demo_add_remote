@@ -1,0 +1,299 @@
+{
+  "checklists": {
+    "checklists": []
+  }, 
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1485789942995, 
+    "versionNumber": 1
+  }, 
+  "listed": true, 
+  "name": "Insights and value prediction dashboard", 
+  "owner": "admin", 
+  "pages": [
+    {
+      "grid": {
+        "tiles": [
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 4, 
+              "left": 2, 
+              "top": 6, 
+              "width": 10
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "insightId": "08y4gMe", 
+            "insightType": "dataset_table", 
+            "resizeImageMode": "FIT_SIZE", 
+            "showTitle": "YES", 
+            "tileParams": {
+              "showDescription": false, 
+              "showMeaning": false, 
+              "showName": true, 
+              "showProgressBar": false, 
+              "showStorageType": false
+            }, 
+            "tileType": "INSIGHT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 4, 
+              "left": 0, 
+              "top": 1, 
+              "width": 5
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "insightId": "DcL67he", 
+            "insightType": "chart", 
+            "resizeImageMode": "FIT_SIZE", 
+            "showTitle": "YES", 
+            "tileParams": {
+              "autoPlayAnimation": true, 
+              "showLegend": true, 
+              "showTooltips": true, 
+              "showXAxis": false, 
+              "showYAxis": false
+            }, 
+            "tileType": "INSIGHT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 4, 
+              "left": 8, 
+              "top": 1, 
+              "width": 4
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "insightId": "qpwBq6G", 
+            "insightType": "chart", 
+            "resizeImageMode": "FIT_SIZE", 
+            "showTitle": "YES", 
+            "tileParams": {
+              "autoPlayAnimation": true, 
+              "showLegend": true, 
+              "showTooltips": true, 
+              "showXAxis": false, 
+              "showYAxis": false
+            }, 
+            "tileType": "INSIGHT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 2, 
+              "left": 0, 
+              "top": 6, 
+              "width": 2
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "NO", 
+            "tileParams": {
+              "isTransparent": false, 
+              "text": "#### You can see the fully prepared data as well as the predicted revenue for each new customer.", 
+              "textAlign": "LEFT"
+            }, 
+            "tileType": "TEXT", 
+            "title": "Scored data"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 2, 
+              "left": 5, 
+              "top": 1, 
+              "width": 3
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "NO", 
+            "tileParams": {
+              "isTransparent": false, 
+              "text": "#Geographic targeting information\n#\u25c4", 
+              "textAlign": "LEFT"
+            }, 
+            "tileType": "TEXT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 2, 
+              "left": 5, 
+              "top": 3, 
+              "width": 3
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "NO", 
+            "tileParams": {
+              "isTransparent": false, 
+              "text": "#Demographic insights\n#\u25ba", 
+              "textAlign": "RIGHT"
+            }, 
+            "tileType": "TEXT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 2, 
+              "left": 2, 
+              "top": 11, 
+              "width": 5
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "insightId": "V7jRfyH", 
+            "insightType": "saved-model_report", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "YES", 
+            "tileParams": {
+              "displayMode": "variables_importance"
+            }, 
+            "tileType": "INSIGHT", 
+            "title": "Variables importance for the random forest model"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 2, 
+              "left": 0, 
+              "top": 11, 
+              "width": 2
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "NO", 
+            "tileParams": {
+              "isTransparent": false, 
+              "text": "####See what are the most important variables to predict lifetime revenue, and spot outliers on the scatter plot.", 
+              "textAlign": "LEFT"
+            }, 
+            "tileType": "TEXT", 
+            "title": "Scored data"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 6, 
+              "left": 0, 
+              "top": 13, 
+              "width": 7
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "insightId": "FJD9BNl", 
+            "insightType": "saved-model_report", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "YES", 
+            "tileParams": {
+              "displayMode": "ensemble_summary"
+            }, 
+            "tileType": "INSIGHT", 
+            "title": "Decision trees of the model"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 1, 
+              "left": 0, 
+              "top": 10, 
+              "width": 12
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "NO", 
+            "tileParams": {
+              "isTransparent": true, 
+              "text": "# Random forest model details\n<hr>", 
+              "textAlign": "CENTER"
+            }, 
+            "tileType": "TEXT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 1, 
+              "left": 0, 
+              "top": 5, 
+              "width": 12
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "NO", 
+            "tileParams": {
+              "isTransparent": true, 
+              "text": "# Scored dataset\n<hr>", 
+              "textAlign": "CENTER"
+            }, 
+            "tileType": "TEXT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 1, 
+              "left": 0, 
+              "top": 0, 
+              "width": 12
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "NO", 
+            "tileParams": {
+              "isTransparent": true, 
+              "text": "# Insights obtained by scoring the enriched CRM data\n<hr>", 
+              "textAlign": "CENTER"
+            }, 
+            "tileType": "TEXT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 4, 
+              "left": 7, 
+              "top": 11, 
+              "width": 5
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "insightId": "sAP5E2p", 
+            "insightType": "saved-model_report", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "YES", 
+            "tileParams": {
+              "displayMode": "r_scatter"
+            }, 
+            "tileType": "INSIGHT", 
+            "title": "Scatter plot of the model"
+          }
+        ]
+      }, 
+      "id": "xA3Q68u", 
+      "showTitle": false, 
+      "title": "Insights obtained by scoring the enriched CRM data"
+    }
+  ], 
+  "showGrid": true, 
+  "tags": [], 
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1510826743801, 
+    "versionNumber": 45
+  }
+}
