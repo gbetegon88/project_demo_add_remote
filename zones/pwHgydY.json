@@ -1,7 +1,16 @@
 {
   "name": "visual_recipes",
   "color": "#8C2DA7",
-  "items": [],
+  "items": [
+    {
+      "objectId": "crm_grouped_by",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_crm_grouped_by",
+      "objectType": "RECIPE"
+    }
+  ],
   "shared": [],
   "tags": [],
   "customFields": {},
