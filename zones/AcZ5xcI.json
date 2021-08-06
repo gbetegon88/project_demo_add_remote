@@ -17,6 +17,10 @@
     {
       "objectId": "train_Prediction___RANDOM_FOREST_REGRESSION__on_crm_prepared",
       "objectType": "RECIPE"
+    },
+    {
+      "objectId": "model_drift",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
