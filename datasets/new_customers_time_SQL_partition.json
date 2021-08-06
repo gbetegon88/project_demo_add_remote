@@ -29,18 +29,18 @@
       {
         "name": "birth",
         "params": {
-          "period": "YEAR"
+          "period": "DAY"
         },
         "type": "time"
       }
     ]
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628263926373
+    "lastModifiedOn": 1628264091317
   },
   "creationTag": {
     "versionNumber": 0,
