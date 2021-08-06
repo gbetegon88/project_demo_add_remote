@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628266653363
+    "lastModifiedOn": 1628266790869
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,8 +85,203 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": false
+    "columns": [
+      {
+        "name": "age",
+        "type": "bigint"
+      },
+      {
+        "name": "F_revenue_min",
+        "type": "bigint"
+      },
+      {
+        "name": "F_revenue_max",
+        "type": "bigint"
+      },
+      {
+        "name": "F_revenue_avg",
+        "type": "double"
+      },
+      {
+        "name": "F_birth_parsed_first",
+        "type": "date"
+      },
+      {
+        "name": "F_birth_parsed_last",
+        "type": "date"
+      },
+      {
+        "name": "F_count",
+        "type": "bigint"
+      },
+      {
+        "name": "M_revenue_min",
+        "type": "bigint"
+      },
+      {
+        "name": "M_revenue_max",
+        "type": "bigint"
+      },
+      {
+        "name": "M_revenue_avg",
+        "type": "double"
+      },
+      {
+        "name": "M_birth_parsed_first",
+        "type": "date"
+      },
+      {
+        "name": "M_birth_parsed_last",
+        "type": "date"
+      },
+      {
+        "name": "M_count",
+        "type": "bigint"
+      }
+    ],
+    "userModified": false,
+    "metadata": {
+      "engineType": "DSS",
+      "pivotElementsModalities": [
+        {
+          "pivotElement": {
+            "keyColumns": [
+              "gender"
+            ],
+            "valueLimit": "TOP_N",
+            "topnLimit": 20,
+            "minOccLimit": 0,
+            "explicitValues": [],
+            "globalCount": true,
+            "valueColumns": [
+              {
+                "column": "revenue",
+                "type": "bigint",
+                "min": false,
+                "max": false,
+                "count": false,
+                "countDistinct": false,
+                "sum": false,
+                "concat": false,
+                "stddev": false,
+                "avg": true,
+                "sum2": false,
+                "first": false,
+                "last": false,
+                "concatDistinct": false,
+                "firstLastNotNull": false
+              },
+              {
+                "column": "revenue",
+                "type": "bigint",
+                "min": true,
+                "max": false,
+                "count": false,
+                "countDistinct": false,
+                "sum": false,
+                "concat": false,
+                "stddev": false,
+                "avg": false,
+                "sum2": false,
+                "first": false,
+                "last": false,
+                "concatDistinct": false,
+                "firstLastNotNull": false
+              },
+              {
+                "column": "revenue",
+                "type": "bigint",
+                "min": false,
+                "max": true,
+                "count": false,
+                "countDistinct": false,
+                "sum": false,
+                "concat": false,
+                "stddev": false,
+                "avg": false,
+                "sum2": false,
+                "first": false,
+                "last": false,
+                "concatDistinct": false,
+                "firstLastNotNull": false
+              },
+              {
+                "column": "birth_parsed",
+                "type": "date",
+                "min": false,
+                "max": false,
+                "count": false,
+                "countDistinct": false,
+                "sum": false,
+                "concat": false,
+                "stddev": false,
+                "avg": false,
+                "sum2": false,
+                "first": true,
+                "last": false,
+                "concatDistinct": false,
+                "firstLastNotNull": false,
+                "orderColumn": "customer_id"
+              },
+              {
+                "column": "birth_parsed",
+                "type": "date",
+                "min": false,
+                "max": false,
+                "count": false,
+                "countDistinct": false,
+                "sum": false,
+                "concat": false,
+                "stddev": false,
+                "avg": false,
+                "sum2": false,
+                "first": false,
+                "last": true,
+                "concatDistinct": false,
+                "firstLastNotNull": false,
+                "orderColumn": "customer_id"
+              }
+            ]
+          },
+          "pivotedModalities": [
+            {
+              "keyValues": [
+                "F"
+              ],
+              "name": "F",
+              "valueColumns": [
+                {
+                  "source": "revenue",
+                  "pivoted": "F_revenue"
+                },
+                {
+                  "source": "birth_parsed",
+                  "pivoted": "F_birth_parsed"
+                }
+              ],
+              "globalCountColumn": "F_count"
+            },
+            {
+              "keyValues": [
+                "M"
+              ],
+              "name": "M",
+              "valueColumns": [
+                {
+                  "source": "revenue",
+                  "pivoted": "M_revenue"
+                },
+                {
+                  "source": "birth_parsed",
+                  "pivoted": "M_birth_parsed"
+                }
+              ],
+              "globalCountColumn": "M_count"
+            }
+          ]
+        }
+      ]
+    }
   },
   "dkuProperties": [],
   "metrics": {
