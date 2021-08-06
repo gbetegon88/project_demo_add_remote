@@ -36,11 +36,11 @@
     ]
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628264748796
+    "lastModifiedOn": 1628264797035
   },
   "creationTag": {
     "versionNumber": 0,
@@ -68,7 +68,27 @@
   "schema": {
     "columns": [
       {
+        "name": "customer_id",
+        "type": "string"
+      },
+      {
+        "name": "birth",
+        "type": "string"
+      },
+      {
+        "name": "birth_parsed",
+        "type": "date"
+      },
+      {
         "name": "birth_parsed_formatted",
+        "type": "string"
+      },
+      {
+        "name": "price_first_item_purchased",
+        "type": "double"
+      },
+      {
+        "name": "gender",
         "type": "string"
       }
     ],
