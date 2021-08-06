@@ -27,17 +27,20 @@
     "considerMissingRequestedPartitionsAsEmpty": false,
     "dimensions": [
       {
-        "name": "",
-        "type": "value"
+        "name": "birth_parsed_formatted",
+        "params": {
+          "period": "MONTH"
+        },
+        "type": "time"
       }
     ]
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628264355062
+    "lastModifiedOn": 1628264384742
   },
   "creationTag": {
     "versionNumber": 0,
