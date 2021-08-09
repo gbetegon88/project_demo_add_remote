@@ -1,20 +1,6 @@
 {
   "name": "iris_python_prediction",
-  "endpoints": [
-    {
-      "modelType": "CLASSIFICATION",
-      "envSelection": {
-        "envMode": "INHERIT"
-      },
-      "testQueries": [],
-      "enrichMapping": [],
-      "healthCheckQueries": [],
-      "returnPostEnrichData": false,
-      "auditPostEnrichData": false,
-      "id": "pickle_prediction",
-      "type": "CUSTOM_PREDICTION"
-    }
-  ],
+  "endpoints": [],
   "publicAccess": true,
   "authRealm": {
     "queryKeys": []
