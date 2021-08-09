@@ -3,12 +3,17 @@
   "endpoints": [
     {
       "envSelection": {
-        "envMode": "INHERIT"
+        "envMode": "EXPLICIT_ENV",
+        "envName": "api_27_demo"
       },
       "testQueries": [],
-      "inputFolderRefs": [],
-      "userFunctionName": "api_py_function",
-      "code": "\n# Insert here initialization code\n\n# This function is the entry point for your Python function API\n# You can call this function with passing \"param1\", \"param2\",\n# \"param3\" as arguments to the API call\n# (see REST API documentation)\ndef api_py_function(param1, param2, param3):\n    return param1 + param2 * param3\n",
+      "inputFolderRefs": [
+        {
+          "ref": "YJC0hRC9"
+        }
+      ],
+      "userFunctionName": "predict_iris",
+      "code": "#initialization code\nimport dataiku\nfrom dataiku.apinode import utils\nimport pickle\nimport os\n\n#import scaler\nfrom feat_engineering import scaler\n\n#load model\nmodel_folder \u003d folders[0]\nmodel_path \u003d os.path.join(model_folder, \"logistic_regression.pkl\")\nmodel \u003d pickle.load(open(model_path, \"rb\"))\n\nclient \u003d utils.get_self_client()\n\ndef predict_iris(query_id, array):\n    \n    #call lookup endpoint to get age and pedi data\n    enrichments \u003d client.lookup_record(\u0027retrieve_pedi_and_age_info\u0027, {\"id\": query_id})\n    pedi \u003d enrichments.get(\u0027data\u0027).get(\"pedi\")\n    age \u003d enrichments.get(\u0027data\u0027).get(\"age\")\n    \n    # preprocess data\n    array \u003d map(float, array)\n    array.extend([pedi, age])\n    array \u003d scaler(array)\n    \n    return array, model.predict([array])\n",
       "id": "pickle_prediction",
       "type": "PY_FUNCTION"
     }
