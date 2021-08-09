@@ -2,6 +2,7 @@
   "envSelection": {
     "envMode": "USE_BUILTIN_MODE"
   },
+  "keptInputColumns": [],
   "diagnosticsSettings": {
     "settings": [
       {
@@ -38,13 +39,13 @@
   "modeling": {
     "max_iterations": 0,
     "ts_kmeans_k": 0,
-    "coef0": 0.0,
+    "coef0": 0,
     "seed": 1337,
     "n_jobs": 1,
     "k": 3,
     "isolation_forest": {
       "max_samples": 0.5,
-      "max_features": 1.0,
+      "max_features": 1,
       "seed": 1337,
       "n_samples": 256,
       "max_depth": 15,
@@ -55,20 +56,20 @@
       "enabled": false,
       "contamination": 0.05
     },
-    "epsilon": 0.0,
-    "min_sample_ratio": 0.0,
+    "epsilon": 0,
+    "min_sample_ratio": 0,
     "metrics": {
       "customEvaluationMetricGIB": true,
       "evaluationMetric": "SILHOUETTE"
     },
-    "gamma": 0.0,
+    "gamma": 0,
     "custom_has_k": false,
     "algorithm": "KMEANS"
   },
   "generatingModelId": "A-DKU_CUSTOMER_LIFETIME_VALUE-bLeq7QJ1-Ww3CAXHA-s6-pp1-m2",
   "preprocessing": {
     "reduce": {
-      "kept_variance": 0.0,
+      "kept_variance": 0,
       "enabled": false
     },
     "per_feature": {
@@ -78,7 +79,7 @@
         "role": "REJECT",
         "sendToInput": "main",
         "customHandlingCode": "",
-        "binarize_constant_threshold": 0.0,
+        "binarize_constant_threshold": 0,
         "type": "NUMERIC",
         "binarize_threshold_mode": "MEDIAN",
         "customProcessorWantsMatrix": false,
@@ -91,7 +92,7 @@
           "recordedMeaning": "DoubleMeaning",
           "userModified": false
         },
-        "impute_constant_value": 0.0
+        "impute_constant_value": 0
       },
       "join_campain": {
         "nb_bins_hashing": 1048576,
@@ -169,7 +170,7 @@
         "role": "INPUT",
         "sendToInput": "main",
         "customHandlingCode": "",
-        "binarize_constant_threshold": 0.0,
+        "binarize_constant_threshold": 0,
         "type": "NUMERIC",
         "binarize_threshold_mode": "MEDIAN",
         "customProcessorWantsMatrix": false,
@@ -182,7 +183,7 @@
           "recordedMeaning": "DoubleMeaning",
           "userModified": false
         },
-        "impute_constant_value": 0.0
+        "impute_constant_value": 0
       },
       "birth": {
         "nb_bins_hashing": 1048576,
@@ -214,7 +215,7 @@
         "role": "REJECT",
         "sendToInput": "main",
         "customHandlingCode": "",
-        "binarize_constant_threshold": 0.0,
+        "binarize_constant_threshold": 0,
         "type": "NUMERIC",
         "binarize_threshold_mode": "MEDIAN",
         "customProcessorWantsMatrix": false,
@@ -227,7 +228,7 @@
           "recordedMeaning": "Date",
           "userModified": false
         },
-        "impute_constant_value": 0.0
+        "impute_constant_value": 0
       },
       "join_ip_continent": {
         "nb_bins_hashing": 1048576,
@@ -258,7 +259,7 @@
         "role": "REJECT",
         "sendToInput": "main",
         "customHandlingCode": "",
-        "binarize_constant_threshold": 0.0,
+        "binarize_constant_threshold": 0,
         "type": "NUMERIC",
         "binarize_threshold_mode": "MEDIAN",
         "customProcessorWantsMatrix": false,
@@ -271,7 +272,7 @@
           "recordedMeaning": "LongMeaning",
           "userModified": false
         },
-        "impute_constant_value": 0.0
+        "impute_constant_value": 0
       },
       "join_GDP_cap": {
         "rescaling": "AVGSTD",
@@ -279,7 +280,7 @@
         "role": "INPUT",
         "sendToInput": "main",
         "customHandlingCode": "",
-        "binarize_constant_threshold": 0.0,
+        "binarize_constant_threshold": 0,
         "type": "NUMERIC",
         "binarize_threshold_mode": "MEDIAN",
         "customProcessorWantsMatrix": false,
@@ -292,7 +293,7 @@
           "recordedMeaning": "LongMeaning",
           "userModified": false
         },
-        "impute_constant_value": 0.0
+        "impute_constant_value": 0
       },
       "customer_id": {
         "nb_bins_hashing": 1048576,
@@ -324,7 +325,7 @@
         "role": "INPUT",
         "sendToInput": "main",
         "customHandlingCode": "",
-        "binarize_constant_threshold": 0.0,
+        "binarize_constant_threshold": 0,
         "type": "NUMERIC",
         "binarize_threshold_mode": "MEDIAN",
         "customProcessorWantsMatrix": false,
@@ -337,7 +338,7 @@
           "recordedMeaning": "LongMeaning",
           "userModified": false
         },
-        "impute_constant_value": 0.0
+        "impute_constant_value": 0
       },
       "join_ip_country": {
         "nb_bins_hashing": 1048576,
@@ -387,7 +388,7 @@
         "behavior": "DISABLED"
       }
     },
-    "preprocessingFitSampleRatio": 1.0,
+    "preprocessingFitSampleRatio": 1,
     "preprocessingFitSampleSeed": 1337,
     "outliers": {
       "min_n": 213,
@@ -404,17 +405,17 @@
       },
       "method": "NONE",
       "correlation_params": {
-        "min_abs_correlation": 0.0,
-        "max_abs_correlation": 1.0,
+        "min_abs_correlation": 0,
+        "max_abs_correlation": 1,
         "n_features": 25
       },
       "lasso_params": {
         "alpha": [
           0.01,
           0.1,
-          1.0,
-          10.0,
-          100.0
+          1,
+          10,
+          100
         ],
         "cross_validate": true
       },
@@ -543,8 +544,8 @@
         "disabled": false,
         "type": "FilterOnNumericalRange",
         "params": {
-          "min": 0.0,
-          "max": 100.0,
+          "min": 0,
+          "max": 100,
           "booleanMode": "AND",
           "columns": [
             "age"
