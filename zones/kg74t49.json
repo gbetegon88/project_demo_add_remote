@@ -11,10 +11,6 @@
       "objectType": "DATASET"
     },
     {
-      "objectId": "compute_YJC0hRC9",
-      "objectType": "RECIPE"
-    },
-    {
       "objectId": "iris",
       "objectType": "DATASET"
     }
