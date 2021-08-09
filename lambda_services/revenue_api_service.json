@@ -1,4 +1,5 @@
 {
+  "name": "revenue_api_service",
   "endpoints": [
     {
       "modelRef": "8A6fb5O8",
@@ -12,10 +13,26 @@
         "shapleyBackgroundSize": 100
       },
       "testQueries": [],
-      "enrichMapping": [],
+      "enrichMapping": [
+        {
+          "datasetRef": "country_gdp",
+          "packagingType": "BUNDLED_TOCONNECTION",
+          "on": [
+            {
+              "resourceLookupCol": "Country"
+            }
+          ],
+          "missingLookupKeyBehavior": "IGNORE",
+          "notFoundBehavior": "IGNORE",
+          "multiMatchBehavior": "KEEP_FIRST",
+          "columnsMapping": {
+            "GDP_cap": "GDP_cap"
+          }
+        }
+      ],
       "healthCheckQueries": [],
       "returnPostEnrichData": false,
-      "auditPostEnrichData": false,
+      "auditPostEnrichData": true,
       "id": "revenue_prediction",
       "type": "STD_PREDICTION"
     }
