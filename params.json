@@ -211,11 +211,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 23,
+    "versionNumber": 25,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628534265886
+    "lastModifiedOn": 1628534605508
   },
   "description": "- Time Series: https://gallery.dataiku.com/projects/DKU_FORECASTINGRETAILSALES/flow/",
   "shortDesc": "Predicting Customer Lifetime Value using web traffic data, and historical customer purchases.",
@@ -237,6 +237,20 @@
             "done": false,
             "text": "Add git remote",
             "createdOn": 1628534265570,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "standard webapp",
+            "createdOn": 1628534597963,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "bokeh webapp",
+            "createdOn": 1628534605448,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
