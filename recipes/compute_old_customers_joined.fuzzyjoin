@@ -1,0 +1,74 @@
+{
+  "joins": [
+    {
+      "table2": 1,
+      "table1": 0,
+      "type": "LEFT",
+      "on": []
+    }
+  ],
+  "selectedColumns": [
+    {
+      "name": "customer_id",
+      "table": 0
+    },
+    {
+      "name": "birth",
+      "table": 0
+    },
+    {
+      "name": "birth_parsed",
+      "table": 0
+    },
+    {
+      "name": "age",
+      "table": 0
+    },
+    {
+      "name": "price_first_item_purchased",
+      "table": 0
+    },
+    {
+      "name": "gender",
+      "table": 0
+    },
+    {
+      "name": "revenue",
+      "table": 0
+    },
+    {
+      "name": "ip",
+      "table": 0
+    },
+    {
+      "name": "join_ip_country",
+      "table": 0
+    },
+    {
+      "name": "pages_visited",
+      "table": 0
+    },
+    {
+      "name": "campain",
+      "table": 0
+    },
+    {
+      "name": "Country",
+      "table": 1
+    },
+    {
+      "name": "GDP_cap",
+      "table": 1
+    }
+  ],
+  "virtualInputs": [
+    {
+      "index": 0
+    },
+    {
+      "index": 1
+    }
+  ],
+  "withMetaColumn": false,
+  "debugMode": false
+}
