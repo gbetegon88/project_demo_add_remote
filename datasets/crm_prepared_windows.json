@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628266933262
+    "lastModifiedOn": 1628519691984
   },
   "creationTag": {
     "versionNumber": 0,
@@ -133,6 +133,10 @@
       {
         "name": "join_GDP_cap",
         "type": "bigint"
+      },
+      {
+        "name": "revenue_avg",
+        "type": "double"
       }
     ],
     "userModified": true
