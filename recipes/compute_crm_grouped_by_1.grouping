@@ -214,7 +214,7 @@
       "$idx": 9,
       "sum": false,
       "concat": false,
-      "type": "bigint",
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
