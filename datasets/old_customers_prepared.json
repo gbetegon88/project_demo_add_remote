@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628520322268
+    "lastModifiedOn": 1628520394122
   },
   "creationTag": {
     "versionNumber": 0,
@@ -95,6 +95,14 @@
         "type": "string"
       },
       {
+        "name": "birth_parsed",
+        "type": "date"
+      },
+      {
+        "name": "age",
+        "type": "bigint"
+      },
+      {
         "name": "price_first_item_purchased",
         "type": "double"
       },
@@ -108,6 +116,10 @@
       },
       {
         "name": "ip",
+        "type": "string"
+      },
+      {
+        "name": "join_ip_country",
         "type": "string"
       },
       {
