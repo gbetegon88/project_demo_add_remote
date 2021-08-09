@@ -200,7 +200,7 @@
         "quantile_bin_nb_bins": 4,
         "binarize_threshold_mode": "MEDIAN",
         "binarize_constant_threshold": 0.0,
-        "role": "INPUT",
+        "role": "REJECT",
         "type": "NUMERIC",
         "state": {
           "userModified": false,
@@ -263,15 +263,15 @@
         "dummy_clip": "MAX_NB_CATEGORIES",
         "cumulative_proportion": 0.95,
         "min_samples": 10,
-        "max_nb_categories": 100,
+        "max_nb_categories": 25,
         "max_cat_safety": 200,
         "nb_bins_hashing": 1048576,
         "hash_whole_categories": true,
         "dummy_drop": "NONE",
-        "role": "REJECT",
+        "role": "INPUT",
         "type": "CATEGORY",
         "state": {
-          "userModified": false,
+          "userModified": true,
           "autoModifiedByDSS": false,
           "recordedMeaning": "CountryMeaning"
         },
@@ -317,7 +317,7 @@
         3,
         5
       ],
-      "enabled": false,
+      "enabled": true,
       "affinity_rbf": false,
       "affinity_nearest_neighbors": false,
       "affinity_sigmoid": false,
@@ -348,7 +348,7 @@
         3,
         5
       ],
-      "enabled": false,
+      "enabled": true,
       "seed": 1337
     },
     "gmm_clustering": {
