@@ -19,7 +19,24 @@
     },
     {
       "testQueries": [],
-      "lookups": [],
+      "lookups": [
+        {
+          "datasetRef": "enrichment_dataset",
+          "packagingType": "BUNDLED_TOCONNECTION",
+          "on": [
+            {
+              "resourceLookupCol": "id"
+            }
+          ],
+          "missingLookupKeyBehavior": "IGNORE",
+          "notFoundBehavior": "IGNORE",
+          "multiMatchBehavior": "KEEP_FIRST",
+          "columnsMapping": {
+            "pedi": "pedi",
+            "age": "age"
+          }
+        }
+      ],
       "id": "retrieve_pedi_and_age_info",
       "type": "DATASETS_LOOKUP"
     }
