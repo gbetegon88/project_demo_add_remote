@@ -200,7 +200,7 @@
         "quantile_bin_nb_bins": 4,
         "binarize_threshold_mode": "MEDIAN",
         "binarize_constant_threshold": 0.0,
-        "role": "INPUT",
+        "role": "REJECT",
         "type": "NUMERIC",
         "state": {
           "userModified": false,
@@ -337,7 +337,9 @@
     },
     "kmeans_clustering": {
       "k": [
-        5
+        5,
+        3,
+        6
       ],
       "enabled": true,
       "seed": 1337,
