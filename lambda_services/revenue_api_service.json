@@ -12,24 +12,104 @@
         "subChunkSize": 5000,
         "shapleyBackgroundSize": 100
       },
-      "testQueries": [],
-      "enrichMapping": [
+      "testQueries": [
         {
-          "datasetRef": "country_gdp",
-          "packagingType": "BUNDLED_TOCONNECTION",
-          "on": [
-            {
-              "resourceLookupCol": "Country"
+          "name": "crm_prepared #1",
+          "q": {
+            "features": {
+              "customer_id": "041b77595d",
+              "birth": "3/15/1987",
+              "birth_parsed": "1987-03-15T00:00:00.000Z",
+              "age": 34,
+              "price_first_item_purchased": 22,
+              "gender": "M",
+              "revenue": 171,
+              "join_ip": "108.124.56.200",
+              "join_ip_country": "United States",
+              "join_pages_visited": 2,
+              "join_campain": false,
+              "join_GDP_cap": 51704
             }
-          ],
-          "missingLookupKeyBehavior": "IGNORE",
-          "notFoundBehavior": "IGNORE",
-          "multiMatchBehavior": "KEEP_FIRST",
-          "columnsMapping": {
-            "GDP_cap": "GDP_cap"
+          }
+        },
+        {
+          "name": "crm_prepared #2",
+          "q": {
+            "features": {
+              "customer_id": "10863d9892",
+              "birth": "5/31/1978",
+              "birth_parsed": "1978-05-31T00:00:00.000Z",
+              "age": 43,
+              "price_first_item_purchased": 44,
+              "gender": "M",
+              "revenue": 156,
+              "join_ip": "85.58.51.243",
+              "join_ip_country": "Spain",
+              "join_pages_visited": 6,
+              "join_campain": false,
+              "join_GDP_cap": 30058
+            }
+          }
+        },
+        {
+          "name": "crm_prepared #3",
+          "q": {
+            "features": {
+              "customer_id": "c92646d6b3",
+              "birth": "6/1/1995",
+              "birth_parsed": "1995-06-01T00:00:00.000Z",
+              "age": 26,
+              "price_first_item_purchased": 28,
+              "gender": "F",
+              "revenue": 130,
+              "join_ip": "150.158.195.184",
+              "join_ip_country": "China",
+              "join_pages_visited": 5,
+              "join_campain": true,
+              "join_GDP_cap": 9055
+            }
+          }
+        },
+        {
+          "name": "crm_prepared #4",
+          "q": {
+            "features": {
+              "customer_id": "9303a03ba8",
+              "birth": "4/10/1975",
+              "birth_parsed": "1975-04-10T00:00:00.000Z",
+              "age": 46,
+              "price_first_item_purchased": 22,
+              "gender": "M",
+              "revenue": 165,
+              "join_ip": "66.243.143.64",
+              "join_ip_country": "United States",
+              "join_pages_visited": 6,
+              "join_campain": false,
+              "join_GDP_cap": 51704
+            }
+          }
+        },
+        {
+          "name": "crm_prepared #5",
+          "q": {
+            "features": {
+              "customer_id": "0d73b6d6ef",
+              "birth": "8/12/1983",
+              "birth_parsed": "1983-08-12T00:00:00.000Z",
+              "age": 37,
+              "price_first_item_purchased": 42,
+              "gender": "F",
+              "revenue": 157,
+              "join_ip": "95.122.27.107",
+              "join_ip_country": "Spain",
+              "join_pages_visited": 2,
+              "join_campain": false,
+              "join_GDP_cap": 30058
+            }
           }
         }
       ],
+      "enrichMapping": [],
       "healthCheckQueries": [],
       "returnPostEnrichData": false,
       "auditPostEnrichData": true,
