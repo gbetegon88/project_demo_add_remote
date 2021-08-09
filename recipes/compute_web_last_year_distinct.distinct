@@ -6,15 +6,6 @@
   "keys": [
     {
       "column": "customer_id"
-    },
-    {
-      "column": "ip"
-    },
-    {
-      "column": "pages_visited"
-    },
-    {
-      "column": "campain"
     }
   ],
   "globalCount": false,
@@ -54,6 +45,17 @@
   },
   "outputColumnNameOverrides": {},
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "customer_id",
+            "type": "string"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   }
