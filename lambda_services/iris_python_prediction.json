@@ -30,7 +30,7 @@
       "lookups": [
         {
           "datasetRef": "enrichment_dataset",
-          "packagingType": "BUNDLED_TOCONNECTION",
+          "packagingType": "REFERENCED",
           "on": [
             {
               "resourceLookupCol": "id"
