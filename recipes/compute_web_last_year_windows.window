@@ -4,6 +4,7 @@
     "enabled": false
   },
   "ntileValues": "10",
+  "keys": [],
   "values": [
     {
       "last": false,
@@ -12,9 +13,11 @@
       "firstLastNotNull": false,
       "column": "customer_id",
       "count": false,
+      "$idx": 0,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -29,71 +32,86 @@
       "first": false
     },
     {
-      "last": false,
       "lagDiff": false,
+      "$idx": 1,
+      "lagValues": "1",
+      "sum": false,
+      "type": "string",
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "$selected": false,
+      "stddev": false,
+      "value": false,
+      "orderColumn": "customer_id",
+      "concatSeparator": ",",
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "ip",
       "count": false,
-      "lagValues": "1",
-      "sum": false,
       "concat": false,
       "lead": false,
       "concatDistinct": false,
-      "dateDiffUnit": "DAY",
-      "min": false,
       "countDistinct": false,
-      "avg": false,
-      "lag": false,
-      "leadValues": "1",
-      "stddev": false,
-      "value": true,
       "leadDiff": false,
       "first": false
     },
     {
-      "last": false,
       "lagDiff": false,
+      "$idx": 2,
+      "lagValues": "1",
+      "sum": false,
+      "type": "string",
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "$selected": false,
+      "stddev": false,
+      "value": false,
+      "orderColumn": "customer_id",
+      "concatSeparator": ",",
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "pages_visited",
       "count": false,
-      "lagValues": "1",
-      "sum": false,
       "concat": false,
       "lead": false,
       "concatDistinct": false,
-      "dateDiffUnit": "DAY",
-      "min": false,
       "countDistinct": false,
-      "avg": false,
-      "lag": false,
-      "leadValues": "1",
-      "stddev": false,
-      "value": true,
       "leadDiff": false,
       "first": false
     },
     {
-      "last": false,
       "lagDiff": false,
+      "$idx": 3,
+      "lagValues": "1",
+      "sum": false,
+      "type": "string",
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "$selected": false,
+      "stddev": false,
+      "value": false,
+      "orderColumn": "customer_id",
+      "concatSeparator": ",",
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "campain",
       "count": false,
-      "lagValues": "1",
-      "sum": false,
       "concat": false,
       "lead": false,
       "concatDistinct": false,
-      "dateDiffUnit": "DAY",
-      "min": false,
       "countDistinct": false,
-      "avg": false,
-      "lag": false,
-      "leadValues": "1",
-      "stddev": false,
-      "value": true,
       "leadDiff": false,
       "first": false
     }
@@ -101,20 +119,46 @@
   "legacyUnboundedWindowStreamBehavior": false,
   "windows": [
     {
-      "windowUpperBound": 0.0,
-      "enablePartitioning": false,
+      "windowUpperBound": 0,
+      "enablePartitioning": true,
       "enableOrdering": false,
       "precedingRows": 0,
       "limitFollowing": false,
       "orders": [],
       "limitPreceding": false,
       "followingRows": 0,
-      "windowLowerBound": 0.0,
-      "enableLimits": false
+      "windowLowerBound": 0,
+      "enableLimits": false,
+      "partitioningColumns": [
+        "customer_id"
+      ]
     }
   ],
   "computedColumns": [],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "customer_id",
+            "type": "string"
+          },
+          {
+            "name": "ip_last",
+            "type": "string"
+          },
+          {
+            "name": "pages_visited_last",
+            "type": "string"
+          },
+          {
+            "name": "campain_last",
+            "type": "string"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   },
@@ -156,5 +200,6 @@
   "ntile": false,
   "rank": false,
   "denseRank": false,
-  "rowNumber": false
+  "rowNumber": false,
+  "outputColumnNameOverrides": {}
 }
