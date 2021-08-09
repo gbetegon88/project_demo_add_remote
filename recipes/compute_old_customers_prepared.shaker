@@ -26,8 +26,81 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateParser",
+      "params": {
+        "outCol": "birth_parsed",
+        "formats": [
+          "MM/dd/yyyy"
+        ],
+        "columns": [
+          "birth"
+        ],
+        "timezone_id": "UTC",
+        "appliesTo": "SINGLE_COLUMN",
+        "lang": "auto"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateDifference",
+      "params": {
+        "output": "since_birth_parsed_days",
+        "outputUnit": "YEARS",
+        "input1": "birth_parsed",
+        "compareTo": "NOW",
+        "reverse": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
+      "params": {
+        "renamings": [
+          {
+            "from": "since_birth_parsed_days",
+            "to": "age"
+          }
+        ]
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "GeoIPResolver",
+      "params": {
+        "inCol": "ip",
+        "extract_country": true,
+        "extract_countrycode3": false,
+        "extract_city": false,
+        "extract_latlng": false,
+        "extract_countrycode": false,
+        "extract_postalcode": false,
+        "extract_timezone": false,
+        "outColPrefix": "join_ip_",
+        "extract_continentcode": false,
+        "extract_region": false,
+        "extract_geopoint": false
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -35,7 +108,23 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "ipcountry": 141,
+    "gender": 100,
+    "join_ip": 100,
+    "campain": 100,
+    "price_first_item_purchased": 210,
+    "ip": 120,
+    "birth": 100,
+    "birth_parsed": 183,
+    "pages_visited": 113,
+    "revenue": 100,
+    "i[": 100,
+    "i[country": 141,
+    "customer_id": 127,
+    "age": 100,
+    "join_ip_country": 128
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
