@@ -1,12 +1,43 @@
 {
   "inputDatasetSmartName": "crm_prepared",
   "script": {
-    "steps": [],
+    "steps": [
+      {
+        "type": "FilterOnNumericalRange",
+        "params": {
+          "min": 0.0,
+          "max": 100.0,
+          "action": "KEEP_ROW",
+          "booleanMode": "AND",
+          "appliesTo": "SINGLE_COLUMN",
+          "columns": [
+            "age"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": true,
+        "disabled": false,
+        "alwaysShowComment": false
+      }
+    ],
     "maxProcessedMemTableBytes": -1,
     "columnsSelection": {
       "mode": "ALL"
     },
-    "columnWidthsByName": {},
+    "columnWidthsByName": {
+      "customer_id": 127,
+      "birth": 100,
+      "birth_parsed": 183,
+      "age": 100,
+      "price_first_item_purchased": 210,
+      "gender": 100,
+      "revenue": 100,
+      "join_ip": 120,
+      "join_ip_country": 141,
+      "join_pages_visited": 150,
+      "join_campain": 105,
+      "join_GDP_cap": 105
+    },
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
       "individualColumns": [],
@@ -41,7 +72,9 @@
       "autoRefreshSample": false,
       "_refreshTrigger": 0
     },
-    "exploreUIParams": {},
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
     "globalSearchQuery": "",
     "explorationFilters": [],
     "previewMode": "ALL_ROWS"
@@ -49,11 +82,11 @@
   "charts": [],
   "name": "Clustering on crm_prepared",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628533446991
+    "lastModifiedOn": 1628534181005
   },
   "creationTag": {
     "versionNumber": 0,
