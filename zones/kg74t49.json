@@ -3,10 +3,6 @@
   "color": "#D03713",
   "items": [
     {
-      "objectId": "YJC0hRC9",
-      "objectType": "MANAGED_FOLDER"
-    },
-    {
       "objectId": "enrichment_dataset",
       "objectType": "DATASET"
     },
