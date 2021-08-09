@@ -119,6 +119,7 @@
         "enabled": false
       },
       "autoSelectColumns": false,
+      "prefix": "join",
       "index": 1,
       "computedColumns": []
     }
@@ -149,15 +150,15 @@
             "type": "string"
           },
           {
-            "name": "ip",
+            "name": "join_ip",
             "type": "string"
           },
           {
-            "name": "pages_visited",
+            "name": "join_pages_visited",
             "type": "string"
           },
           {
-            "name": "campain",
+            "name": "join_campain",
             "type": "string"
           }
         ],
