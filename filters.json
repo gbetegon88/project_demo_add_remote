@@ -1,33 +1,3 @@
 {
-  "filters": [
-    {
-      "isAdvanced": false,
-      "scope": "PRIVATE",
-      "isDirty": true,
-      "creatorLogin": "admin",
-      "id": "d8119e1ac86a9a6636bcaeb42034fbb868674883743912e0410939f4c879720c96b6aa754acfab67f251345b262a3b9ee7251ef395a6ee56cacf4c0929ae4a26",
-      "creationDate": 1628522745691,
-      "derivedFromFilterId": "-1",
-      "structuredFlowObjectFilter": {
-        "tags": [],
-        "types": [],
-        "creator": [],
-        "customCreationDateRange": {
-          "from": 0,
-          "to": 0
-        },
-        "customModificationDateRange": {
-          "from": 0,
-          "to": 0
-        },
-        "downstreamPredecessorsIds": [],
-        "datasetTypes": [],
-        "recipeTypes": [
-          "pivot"
-        ]
-      },
-      "removeFadedElements": false,
-      "query": "recipeType:pivot"
-    }
-  ]
+  "filters": []
 }
