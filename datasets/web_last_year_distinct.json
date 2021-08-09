@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628522112952
+    "lastModifiedOn": 1628522142970
   },
   "creationTag": {
     "versionNumber": 0,
@@ -88,18 +88,6 @@
     "columns": [
       {
         "name": "customer_id",
-        "type": "string"
-      },
-      {
-        "name": "ip",
-        "type": "string"
-      },
-      {
-        "name": "pages_visited",
-        "type": "string"
-      },
-      {
-        "name": "campain",
         "type": "string"
       }
     ],
