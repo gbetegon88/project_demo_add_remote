@@ -1,25 +1,43 @@
 {
   "tags": {
+    "partitions": {
+      "color": "#0f6d82"
+    },
+    "variables": {
+      "color": "#0f6d82"
+    },
+    "section:Use cases": {
+      "color": "#94be8e"
+    },
+    "recipe-editor": {
+      "color": "#1ac2ab"
+    },
+    "sample": {
+      "color": "#123883"
+    },
     "sample_project": {
       "color": "#d66b9b"
     },
-    "within_dss:Use cases": {},
-    "section:Basics": {},
-    "downloads": {},
-    "section:Use cases": {},
+    "within_dss:Use cases": {
+      "color": "#d66b9b"
+    },
+    "section:Basics": {
+      "color": "#00a55a"
+    },
+    "downloads": {
+      "color": "#de1ea5"
+    },
     "SAMPLE_PROJECT": {
       "color": "#1ac2ab"
     },
-    "sample": {},
     "creator:admin": {
       "color": "#28aadd"
     },
-    "gallery": {},
+    "gallery": {
+      "color": "#FFD83D"
+    },
     "creator_admin": {
       "color": "#1ac2ab"
-    },
-    "variables": {},
-    "partitions": {},
-    "recipe-editor": {}
+    }
   }
 }
