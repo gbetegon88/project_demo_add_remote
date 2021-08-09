@@ -1,0 +1,32 @@
+{
+  "endpoints": [
+    {
+      "modelRef": "8A6fb5O8",
+      "useJava": true,
+      "outputExplanations": false,
+      "individualExplanationParams": {
+        "method": "ICE",
+        "nbExplanations": 3,
+        "drawInScoredSet": false,
+        "subChunkSize": 5000,
+        "shapleyBackgroundSize": 100
+      },
+      "testQueries": [],
+      "enrichMapping": [],
+      "healthCheckQueries": [],
+      "returnPostEnrichData": false,
+      "auditPostEnrichData": false,
+      "id": "revenue_prediction",
+      "type": "STD_PREDICTION"
+    }
+  ],
+  "publicAccess": true,
+  "authRealm": {
+    "queryKeys": []
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
