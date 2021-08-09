@@ -69,7 +69,7 @@
       "table": 0
     },
     {
-      "name": "ip",
+      "name": "join_ip",
       "type": "string",
       "table": 0
     },
@@ -79,19 +79,14 @@
       "table": 0
     },
     {
-      "name": "pages_visited",
+      "name": "join_pages_visited",
       "type": "double",
       "table": 0
     },
     {
-      "name": "campain",
+      "name": "join_campain",
       "type": "boolean",
       "table": 0
-    },
-    {
-      "name": "Country",
-      "type": "string",
-      "table": 1
     },
     {
       "name": "GDP_cap",
@@ -144,7 +139,7 @@
             "type": "bigint"
           },
           {
-            "name": "ip",
+            "name": "join_ip",
             "type": "string"
           },
           {
@@ -152,16 +147,12 @@
             "type": "string"
           },
           {
-            "name": "pages_visited",
+            "name": "join_pages_visited",
             "type": "double"
           },
           {
-            "name": "campain",
+            "name": "join_campain",
             "type": "boolean"
-          },
-          {
-            "name": "join_Country",
-            "type": "string"
           },
           {
             "name": "join_GDP_cap",
