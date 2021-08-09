@@ -18,7 +18,15 @@
       "type": "PY_FUNCTION"
     },
     {
-      "testQueries": [],
+      "testQueries": [
+        {
+          "q": {
+            "data": {
+              "id": 1
+            }
+          }
+        }
+      ],
       "lookups": [
         {
           "datasetRef": "enrichment_dataset",
