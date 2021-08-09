@@ -25,6 +25,14 @@
     {
       "objectId": "compute_model_drift",
       "objectType": "RECIPE"
+    },
+    {
+      "objectId": "new_customers_prepared_clustered",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "cluster_new_customers_prepared",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
