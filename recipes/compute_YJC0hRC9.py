@@ -14,7 +14,7 @@ import os
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
-iris_ds = dataiku.Dataset("iris")
+iris_ds = dataiku.Dataset("iris_dataset")
 iris_df = iris_ds.get_dataframe()
 
 array = iris_df.values
