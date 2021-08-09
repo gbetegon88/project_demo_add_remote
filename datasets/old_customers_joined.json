@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628520538447
+    "lastModifiedOn": 1628520809428
   },
   "creationTag": {
     "versionNumber": 0,
@@ -115,7 +115,7 @@
         "type": "bigint"
       },
       {
-        "name": "ip",
+        "name": "join_ip",
         "type": "string"
       },
       {
@@ -123,16 +123,12 @@
         "type": "string"
       },
       {
-        "name": "pages_visited",
+        "name": "join_pages_visited",
         "type": "double"
       },
       {
-        "name": "campain",
+        "name": "join_campain",
         "type": "boolean"
-      },
-      {
-        "name": "join_Country",
-        "type": "string"
       },
       {
         "name": "join_GDP_cap",
