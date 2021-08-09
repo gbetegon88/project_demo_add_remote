@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628520501805
+    "lastModifiedOn": 1628520538447
   },
   "creationTag": {
     "versionNumber": 0,
@@ -131,11 +131,11 @@
         "type": "boolean"
       },
       {
-        "name": "Country",
+        "name": "join_Country",
         "type": "string"
       },
       {
-        "name": "GDP_cap",
+        "name": "join_GDP_cap",
         "type": "string"
       }
     ],
