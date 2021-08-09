@@ -33,6 +33,14 @@
     {
       "objectId": "cluster_new_customers_prepared",
       "objectType": "RECIPE"
+    },
+    {
+      "objectId": "train_Clustering__KMEANS__on_crm_prepared",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "iZonk7Jf",
+      "objectType": "SAVED_MODEL"
     }
   ],
   "shared": [],
