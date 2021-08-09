@@ -22,11 +22,11 @@
             "unicodeCasting": false,
             "clearSalutations": false,
             "sortAlphabetically": false,
-            "caseInsensitive": false,
+            "caseInsensitive": true,
             "language": "english",
             "clearStopWords": false,
             "transformToStem": false,
-            "normaliseText": false
+            "normaliseText": true
           }
         }
       ]
