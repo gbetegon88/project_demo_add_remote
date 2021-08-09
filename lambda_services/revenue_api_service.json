@@ -112,7 +112,7 @@
       "enrichMapping": [],
       "healthCheckQueries": [],
       "returnPostEnrichData": false,
-      "auditPostEnrichData": true,
+      "auditPostEnrichData": false,
       "id": "revenue_prediction",
       "type": "STD_PREDICTION"
     }
