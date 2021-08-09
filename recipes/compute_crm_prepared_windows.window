@@ -311,21 +311,22 @@
   "legacyUnboundedWindowStreamBehavior": false,
   "windows": [
     {
+      "windowLimitMode": "ROWS",
       "windowUpperBound": 0,
       "enablePartitioning": true,
       "enableOrdering": true,
-      "precedingRows": 0,
-      "limitFollowing": false,
+      "precedingRows": 5,
+      "limitFollowing": true,
       "orders": [
         {
           "column": "birth_parsed",
           "desc": false
         }
       ],
-      "limitPreceding": false,
-      "followingRows": 0,
+      "limitPreceding": true,
+      "followingRows": 5,
       "windowLowerBound": 0,
-      "enableLimits": false,
+      "enableLimits": true,
       "partitioningColumns": [
         "age"
       ]
