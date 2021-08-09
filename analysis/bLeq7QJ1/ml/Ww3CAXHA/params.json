@@ -348,7 +348,7 @@
         3,
         5
       ],
-      "enabled": false,
+      "enabled": true,
       "seed": 1337
     },
     "gmm_clustering": {
