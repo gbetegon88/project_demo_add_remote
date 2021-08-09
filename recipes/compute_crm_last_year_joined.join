@@ -6,40 +6,66 @@
       "conditionsMode": "AND",
       "type": "LEFT",
       "outerJoinOnTheLeft": true,
-      "on": []
+      "on": [
+        {
+          "column1": {
+            "name": "customer_id",
+            "table": 0
+          },
+          "dateDiffUnit": "DAY",
+          "column2": {
+            "name": "customer_id",
+            "table": 1
+          },
+          "maxMatches": 1,
+          "caseInsensitive": false,
+          "maxDistance": 0,
+          "normalizeText": false,
+          "type": "EQ",
+          "strict": false
+        }
+      ]
     }
   ],
   "selectedColumns": [
     {
       "name": "customer_id",
+      "type": "string",
       "table": 0
     },
     {
       "name": "birth",
+      "type": "string",
       "table": 0
     },
     {
       "name": "price_first_item_purchased",
+      "type": "string",
       "table": 0
     },
     {
       "name": "gender",
+      "type": "string",
       "table": 0
     },
     {
       "name": "revenue",
+      "type": "string",
       "table": 0
     },
     {
       "name": "ip",
+      "type": "string",
       "table": 1
     },
     {
       "name": "pages_visited",
+      "type": "string",
       "table": 1
     },
     {
       "name": "campain",
+      "type": "string",
       "table": 1
     }
   ],
@@ -97,5 +123,47 @@
       "computedColumns": []
     }
   ],
+  "computedColumns": [],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "customer_id",
+            "type": "string"
+          },
+          {
+            "name": "birth",
+            "type": "string"
+          },
+          {
+            "name": "price_first_item_purchased",
+            "type": "string"
+          },
+          {
+            "name": "gender",
+            "type": "string"
+          },
+          {
+            "name": "revenue",
+            "type": "string"
+          },
+          {
+            "name": "ip",
+            "type": "string"
+          },
+          {
+            "name": "pages_visited",
+            "type": "string"
+          },
+          {
+            "name": "campain",
+            "type": "string"
+          }
+        ],
+        "userModified": false
+      }
+    }
+  },
   "enableAutoCastInJoinConditions": false
 }
