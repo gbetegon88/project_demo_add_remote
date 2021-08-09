@@ -268,7 +268,7 @@
         "nb_bins_hashing": 1048576,
         "hash_whole_categories": true,
         "dummy_drop": "NONE",
-        "role": "INPUT",
+        "role": "REJECT",
         "type": "CATEGORY",
         "state": {
           "userModified": true,
