@@ -41,6 +41,14 @@
     {
       "objectId": "iZonk7Jf",
       "objectType": "SAVED_MODEL"
+    },
+    {
+      "objectId": "new_customers_clustered_scored",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "score_new_customers_prepared_1",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
