@@ -1,12 +1,7 @@
 {
   "name": "API",
   "color": "#D03713",
-  "items": [
-    {
-      "objectId": "iris",
-      "objectType": "DATASET"
-    }
-  ],
+  "items": [],
   "shared": [],
   "tags": [],
   "customFields": {},
