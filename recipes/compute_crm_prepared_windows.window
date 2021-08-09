@@ -173,9 +173,10 @@
       "dateDiffUnit": "DAY",
       "min": false,
       "countDistinct": false,
-      "avg": false,
+      "avg": true,
       "lag": false,
       "leadValues": "1",
+      "$selected": false,
       "stddev": false,
       "value": true,
       "leadDiff": false,
@@ -311,15 +312,23 @@
   "windows": [
     {
       "windowUpperBound": 0,
-      "enablePartitioning": false,
-      "enableOrdering": false,
+      "enablePartitioning": true,
+      "enableOrdering": true,
       "precedingRows": 0,
       "limitFollowing": false,
-      "orders": [],
+      "orders": [
+        {
+          "column": "birth_parsed",
+          "desc": false
+        }
+      ],
       "limitPreceding": false,
       "followingRows": 0,
       "windowLowerBound": 0,
-      "enableLimits": false
+      "enableLimits": false,
+      "partitioningColumns": [
+        "age"
+      ]
     }
   ],
   "computedColumns": [],
@@ -374,6 +383,10 @@
           {
             "name": "join_GDP_cap",
             "type": "bigint"
+          },
+          {
+            "name": "revenue_avg",
+            "type": "double"
           }
         ],
         "userModified": false
