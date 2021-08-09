@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628520220032
+    "lastModifiedOn": 1628520732697
   },
   "creationTag": {
     "versionNumber": 0,
@@ -107,15 +107,15 @@
         "type": "string"
       },
       {
-        "name": "ip",
+        "name": "join_ip",
         "type": "string"
       },
       {
-        "name": "pages_visited",
+        "name": "join_pages_visited",
         "type": "string"
       },
       {
-        "name": "campain",
+        "name": "join_campain",
         "type": "string"
       }
     ],
