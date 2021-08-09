@@ -211,11 +211,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 25,
+    "versionNumber": 27,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628534605508
+    "lastModifiedOn": 1628535631391
   },
   "description": "- Time Series: https://gallery.dataiku.com/projects/DKU_FORECASTINGRETAILSALES/flow/",
   "shortDesc": "Predicting Customer Lifetime Value using web traffic data, and historical customer purchases.",
@@ -251,6 +251,20 @@
             "done": false,
             "text": "bokeh webapp",
             "createdOn": 1628534605448,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "fix cluster",
+            "createdOn": 1628535604806,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "add flow tags",
+            "createdOn": 1628535631307,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
