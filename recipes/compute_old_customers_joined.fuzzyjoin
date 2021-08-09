@@ -4,60 +4,98 @@
       "table2": 1,
       "table1": 0,
       "type": "LEFT",
-      "on": []
+      "on": [
+        {
+          "column1": {
+            "name": "join_ip_country",
+            "table": 0
+          },
+          "column2": {
+            "name": "Country",
+            "table": 1
+          },
+          "fuzzyMatchDesc": {
+            "distanceType": "LEVENSHTEIN",
+            "threshold": 1
+          },
+          "normaliseDesc": {
+            "unicodeCasting": false,
+            "clearSalutations": false,
+            "sortAlphabetically": false,
+            "caseInsensitive": false,
+            "language": "english",
+            "clearStopWords": false,
+            "transformToStem": false,
+            "normaliseText": false
+          }
+        }
+      ]
     }
   ],
   "selectedColumns": [
     {
       "name": "customer_id",
+      "type": "string",
       "table": 0
     },
     {
       "name": "birth",
+      "type": "string",
       "table": 0
     },
     {
       "name": "birth_parsed",
+      "type": "date",
       "table": 0
     },
     {
       "name": "age",
+      "type": "bigint",
       "table": 0
     },
     {
       "name": "price_first_item_purchased",
+      "type": "double",
       "table": 0
     },
     {
       "name": "gender",
+      "type": "string",
       "table": 0
     },
     {
       "name": "revenue",
+      "type": "bigint",
       "table": 0
     },
     {
       "name": "ip",
+      "type": "string",
       "table": 0
     },
     {
       "name": "join_ip_country",
+      "type": "string",
       "table": 0
     },
     {
       "name": "pages_visited",
+      "type": "double",
       "table": 0
     },
     {
       "name": "campain",
+      "type": "boolean",
       "table": 0
     },
     {
       "name": "Country",
+      "type": "string",
       "table": 1
     },
     {
       "name": "GDP_cap",
+      "type": "string",
       "table": 1
     }
   ],
@@ -70,5 +108,67 @@
     }
   ],
   "withMetaColumn": false,
-  "debugMode": false
+  "debugMode": false,
+  "computedColumns": [],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "customer_id",
+            "type": "string"
+          },
+          {
+            "name": "birth",
+            "type": "string"
+          },
+          {
+            "name": "birth_parsed",
+            "type": "date"
+          },
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "price_first_item_purchased",
+            "type": "double"
+          },
+          {
+            "name": "gender",
+            "type": "string"
+          },
+          {
+            "name": "revenue",
+            "type": "bigint"
+          },
+          {
+            "name": "ip",
+            "type": "string"
+          },
+          {
+            "name": "join_ip_country",
+            "type": "string"
+          },
+          {
+            "name": "pages_visited",
+            "type": "double"
+          },
+          {
+            "name": "campain",
+            "type": "boolean"
+          },
+          {
+            "name": "Country",
+            "type": "string"
+          },
+          {
+            "name": "GDP_cap",
+            "type": "string"
+          }
+        ],
+        "userModified": false
+      }
+    }
+  }
 }
