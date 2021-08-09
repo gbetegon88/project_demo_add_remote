@@ -15,6 +15,27 @@
           ]
         },
         "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "GeoIPResolver",
+        "params": {
+          "inCol": "join_ip",
+          "outColPrefix": "join_ip_",
+          "extract_country": false,
+          "extract_countrycode": false,
+          "extract_region": false,
+          "extract_city": false,
+          "extract_postalcode": false,
+          "extract_latlng": false,
+          "extract_timezone": false,
+          "extract_continentcode": true,
+          "extract_geopoint": false,
+          "extract_countrycode3": false
+        },
+        "metaType": "PROCESSOR",
         "preview": true,
         "disabled": false,
         "alwaysShowComment": false
@@ -36,7 +57,13 @@
       "join_ip_country": 141,
       "join_pages_visited": 150,
       "join_campain": 105,
-      "join_GDP_cap": 105
+      "join_GDP_cap": 105,
+      "join_ip_geopoint": 183,
+      "join_ip_city": 155,
+      "join_ip_region_hierarchy": 195,
+      "join_ip_region": 190,
+      "join_ip_region_code": 158,
+      "join_ip_country_code": 165
     },
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
@@ -82,11 +109,11 @@
   "charts": [],
   "name": "Clustering on crm_prepared",
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 11,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628534181005
+    "lastModifiedOn": 1628534521294
   },
   "creationTag": {
     "versionNumber": 0,
