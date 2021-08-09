@@ -6,7 +6,21 @@
         "envMode": "EXPLICIT_ENV",
         "envName": "api_27_demo"
       },
-      "testQueries": [],
+      "testQueries": [
+        {
+          "q": {
+            "query_id": 5,
+            "array": [
+              "1.",
+              "90.",
+              "62.",
+              "12.",
+              "43.",
+              "27.2"
+            ]
+          }
+        }
+      ],
       "inputFolderRefs": [
         {
           "ref": "YJC0hRC9"
