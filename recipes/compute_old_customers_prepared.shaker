@@ -93,6 +93,7 @@
         "extract_countrycode": false,
         "extract_postalcode": false,
         "extract_timezone": false,
+        "outColPrefix": "join_ip_",
         "extract_continentcode": false,
         "extract_region": false,
         "extract_geopoint": false
