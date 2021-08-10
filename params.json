@@ -50,6 +50,7 @@
       "zonesGraphConnectZones": true
     },
     "gitCommitMode": "AUTO",
+    "useRemoteGit": true,
     "disableAutomaticTriggers": false,
     "integrations": {
       "integrations": []
@@ -211,11 +212,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 28,
+    "versionNumber": 29,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1628605282800
+    "lastModifiedOn": 1628605436168
   },
   "description": "- Time Series: https://gallery.dataiku.com/projects/DKU_FORECASTINGRETAILSALES/flow/",
   "shortDesc": "Predicting Customer Lifetime Value using web traffic data, and historical customer purchases.",
